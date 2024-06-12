@@ -1,0 +1,860 @@
+2024-06-11T19:45:07.301+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 28200 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:45:07.301+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:45:07.526+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:45:07.551+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:45:08.973+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:45:08.974+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:45:08.974+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:45:08.993+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:45:08.993+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1689 ms
+2024-06-11T19:45:09.022+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:45:09.024+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:45:09.029+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:45:09.030+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-06-11T19:45:09.042+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2537f2f4
+2024-06-11T19:45:09.042+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-06-11T19:45:09.047+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:45:09.105+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:45:09.145+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:45:09.474+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-11T19:45:09.475+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-11T19:45:09.524+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:45:09.586+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f954fcc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f376acd, org.springframework.security.web.context.SecurityContextHolderFilter@3772513, org.springframework.security.web.header.HeaderWriterFilter@2a71fa3b, org.springframework.web.filter.CorsFilter@562c9829, org.springframework.security.web.authentication.logout.LogoutFilter@43867a81, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@6e3c6889, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3106d1d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@140355e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@448513d3, org.springframework.security.web.session.SessionManagementFilter@4ae4ed36, org.springframework.security.web.access.ExceptionTranslationFilter@693b6f1b, org.springframework.security.web.access.intercept.AuthorizationFilter@4a2b1205]
+2024-06-11T19:45:09.705+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T19:45:09.732+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-11T19:45:09.752+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 2.492 seconds (process running for 9751.001)
+2024-06-11T19:45:09.755+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-06-11T19:45:11.133+05:30  INFO 28200 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-06-11T19:45:11.164+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:45:11.164+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-06-11T19:45:11.171+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-06-11T19:45:11.257+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.parser.ParserException: expected '<document start>', but found '<block mapping start>'
+ in 'reader', line 25, column 1:
+    logging:
+    ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:250) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:152) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:105) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:149) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:510) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.prodapt.networkticketingapplicationproject.NetworkticketingapplicationprojectApplication.main(NetworkticketingapplicationprojectApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-11T19:45:14.739+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.parser.ParserException: expected '<document start>', but found '<block mapping start>'
+ in 'reader', line 25, column 1:
+    logging:
+    ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:250) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:152) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:105) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:149) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:510) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.prodapt.networkticketingapplicationproject.NetworkticketingapplicationprojectApplication.main(NetworkticketingapplicationprojectApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-11T19:45:31.366+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.parser.ParserException: while parsing a block mapping
+ in 'reader', line 26, column 3:
+      file:
+      ^
+expected <block end>, but found '<block mapping start>'
+ in 'reader', line 28, column 4:
+       logback:
+       ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:654) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:330) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:131) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:162) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:515) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.prodapt.networkticketingapplicationproject.NetworkticketingapplicationprojectApplication.main(NetworkticketingapplicationprojectApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-11T19:45:36.931+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 28200 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:45:36.931+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:45:37.171+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:45:37.192+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:45:37.270+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:45:37.271+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:45:37.272+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:45:37.290+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:45:37.291+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 358 ms
+2024-06-11T19:45:37.319+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:45:37.321+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:45:37.326+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:45:37.327+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-06-11T19:45:37.340+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@520e84b4
+2024-06-11T19:45:37.341+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-06-11T19:45:37.343+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:45:37.412+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:45:37.456+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:45:37.778+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-11T19:45:37.778+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-11T19:45:37.835+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:45:37.901+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7471c6ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35383a49, org.springframework.security.web.context.SecurityContextHolderFilter@636922a1, org.springframework.security.web.header.HeaderWriterFilter@5896f4ed, org.springframework.web.filter.CorsFilter@4f277c97, org.springframework.security.web.authentication.logout.LogoutFilter@379ed2c7, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@482d9e00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ebfaf2f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e11f89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e75a5bb, org.springframework.security.web.session.SessionManagementFilter@4a1ac5ed, org.springframework.security.web.access.ExceptionTranslationFilter@5dca1239, org.springframework.security.web.access.intercept.AuthorizationFilter@2ddf8b9b]
+2024-06-11T19:45:37.981+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T19:45:38.006+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-11T19:45:38.016+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 1.174 seconds (process running for 9779.265)
+2024-06-11T19:45:38.019+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-06-11T19:45:39.406+05:30  INFO 28200 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-06-11T19:45:39.430+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:45:39.431+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-06-11T19:45:39.438+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-06-11T19:45:39.551+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 28200 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:45:39.551+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:45:39.761+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:45:39.782+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:45:39.874+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:45:39.875+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:45:39.875+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:45:39.893+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:45:39.893+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 340 ms
+2024-06-11T19:45:39.931+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:45:39.933+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:45:39.938+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:45:39.939+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-06-11T19:45:39.955+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ee8ca93
+2024-06-11T19:45:39.956+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-06-11T19:45:39.957+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:45:40.014+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:45:40.052+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:45:40.098+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authenticationJwtTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils': Error creating bean with name 'jwtUtils': Injection of autowired dependencies failed
+2024-06-11T19:45:40.103+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-11T19:45:40.106+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-5 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.10/java.lang.Thread.run(Thread.java:842)
+2024-06-11T19:45:40.110+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-5 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.10/sun.security.ssl.HandshakeContext.getRequestedServerNames(HandshakeContext.java:589)
+ java.base@17.0.10/sun.security.ssl.SSLSessionImpl.<init>(SSLSessionImpl.java:201)
+ java.base@17.0.10/sun.security.ssl.SSLSessionImpl.<init>(SSLSessionImpl.java:178)
+ java.base@17.0.10/sun.security.ssl.ServerHello$T13ServerHelloConsumer.consume(ServerHello.java:1255)
+ java.base@17.0.10/sun.security.ssl.ServerHello$ServerHelloConsumer.onServerHello(ServerHello.java:1006)
+ java.base@17.0.10/sun.security.ssl.ServerHello$ServerHelloConsumer.consume(ServerHello.java:894)
+ java.base@17.0.10/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:396)
+ java.base@17.0.10/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:480)
+ java.base@17.0.10/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:458)
+ java.base@17.0.10/sun.security.ssl.TransportContext.dispatch(TransportContext.java:201)
+ java.base@17.0.10/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+ java.base@17.0.10/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+ java.base@17.0.10/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+ java.base@17.0.10/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+ java.base@17.0.10/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+ app//com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:215)
+ app//com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:192)
+ app//com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:100)
+ app//com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:371)
+ app//com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:208)
+ app//com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428)
+ app//com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+ app//com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+ app//com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+ app//com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+ app//com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+ app//com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+ app//com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+ app//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+ app//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+ app//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:724)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:703)
+ java.base@17.0.10/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+ java.base@17.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.10/java.lang.Thread.run(Thread.java:842)
+2024-06-11T19:45:40.112+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-06-11T19:45:40.113+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:45:40.115+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-06-11T19:45:40.150+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-06-11T19:45:40.154+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-11T19:45:40.157+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.prodapt.networkticketingapplicationproject.NetworkticketingapplicationprojectApplication.main(NetworkticketingapplicationprojectApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.0.jar:3.3.0]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationJwtTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils': Error creating bean with name 'jwtUtils': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.0.jar:3.3.0]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 60 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'networkticketapp.jwtSecret' in value "${networkticketapp.jwtSecret}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 71 common frames omitted
+
+2024-06-11T19:45:42.621+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.parser.ParserException: expected '<document start>', but found '<block mapping start>'
+ in 'reader', line 22, column 1:
+    networkticketapp:
+    ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:250) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:152) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:105) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:149) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:510) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.prodapt.networkticketingapplicationproject.NetworkticketingapplicationprojectApplication.main(NetworkticketingapplicationprojectApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-11T19:45:47.107+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.parser.ParserException: expected '<document start>', but found '<block mapping start>'
+ in 'reader', line 22, column 1:
+    networkticketapp:
+    ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:250) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:152) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:105) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:149) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:510) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.prodapt.networkticketingapplicationproject.NetworkticketingapplicationprojectApplication.main(NetworkticketingapplicationprojectApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-11T19:46:03.034+05:30 ERROR 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.parser.ParserException: while parsing a block mapping
+ in 'reader', line 26, column 3:
+      file:
+      ^
+expected <block end>, but found '<block mapping start>'
+ in 'reader', line 28, column 4:
+       logback:
+       ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:654) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:330) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:369) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:348) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:323) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:209) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:131) ~[snakeyaml-2.2.jar:na]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:162) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:515) ~[snakeyaml-2.2.jar:na]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.prodapt.networkticketingapplicationproject.NetworkticketingapplicationprojectApplication.main(NetworkticketingapplicationprojectApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-11T19:47:58.897+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 28200 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:47:58.897+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:47:59.110+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:47:59.135+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:47:59.247+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:47:59.251+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:47:59.251+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:47:59.272+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:47:59.273+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 374 ms
+2024-06-11T19:47:59.301+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:47:59.303+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:47:59.309+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:47:59.310+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-06-11T19:47:59.324+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23286f0f
+2024-06-11T19:47:59.324+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-06-11T19:47:59.326+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:47:59.393+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:47:59.437+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:47:59.713+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-11T19:47:59.714+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-11T19:47:59.756+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:47:59.811+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20fd5ed3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40aa7467, org.springframework.security.web.context.SecurityContextHolderFilter@5702c6bb, org.springframework.security.web.header.HeaderWriterFilter@6046cdd7, org.springframework.web.filter.CorsFilter@2a9c2857, org.springframework.security.web.authentication.logout.LogoutFilter@147e9922, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@2254b2d2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7db985ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b47c7f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e63853e, org.springframework.security.web.session.SessionManagementFilter@b3ea1ff, org.springframework.security.web.access.ExceptionTranslationFilter@3b52387e, org.springframework.security.web.access.intercept.AuthorizationFilter@30b49be9]
+2024-06-11T19:47:59.865+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T19:47:59.879+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-11T19:47:59.885+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 1.009 seconds (process running for 9921.134)
+2024-06-11T19:47:59.886+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-06-11T19:48:14.642+05:30  INFO 28200 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 52 class path changes (0 additions, 52 deletions, 0 modifications)
+2024-06-11T19:48:14.665+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:48:14.665+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-06-11T19:48:14.675+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-06-11T19:48:27.682+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 28200 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:48:27.683+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:48:27.887+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:48:27.888+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-06-11T19:48:27.993+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:48:27.994+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:48:27.994+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:48:28.023+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:48:28.023+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 338 ms
+2024-06-11T19:48:28.075+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:48:28.078+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:48:28.083+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:48:28.085+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-06-11T19:48:28.103+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61bd88fd
+2024-06-11T19:48:28.104+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-06-11T19:48:28.105+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:48:28.124+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:48:28.124+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:48:28.176+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:48:28.346+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-11T19:48:28.376+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bef5864, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3078ee67, org.springframework.security.web.context.SecurityContextHolderFilter@649162e2, org.springframework.security.web.header.HeaderWriterFilter@be55e47, org.springframework.web.filter.CorsFilter@4117a07c, org.springframework.security.web.csrf.CsrfFilter@507b8f0e, org.springframework.security.web.authentication.logout.LogoutFilter@3fe7978e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1207275, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@75cfde57, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@31bfce1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1bdb32a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@681e9281, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5479b5f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62d6a89e, org.springframework.security.web.access.ExceptionTranslationFilter@21d3b11a, org.springframework.security.web.access.intercept.AuthorizationFilter@5b962986]
+2024-06-11T19:48:28.389+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T19:48:28.403+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-11T19:48:28.409+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 0.75 seconds (process running for 9949.659)
+2024-06-11T19:48:28.413+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - AnyNestedCondition 3 matched 0 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-06-11T19:48:30.850+05:30  INFO 28200 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 48 class path changes (48 additions, 0 deletions, 0 modifications)
+2024-06-11T19:48:30.875+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-44] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:48:30.877+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-06-11T19:48:30.887+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-06-11T19:48:30.990+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 28200 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:48:30.991+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:48:31.248+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:48:31.278+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:48:31.408+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:48:31.410+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:48:31.411+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:48:31.438+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:48:31.438+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 443 ms
+2024-06-11T19:48:31.471+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:48:31.472+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:48:31.479+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:48:31.480+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-06-11T19:48:31.494+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20fad5e7
+2024-06-11T19:48:31.495+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-06-11T19:48:31.496+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:48:31.562+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:48:31.602+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:48:31.994+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-11T19:48:31.995+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-11T19:48:32.063+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:48:32.152+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72cc08c6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32e900f5, org.springframework.security.web.context.SecurityContextHolderFilter@29297a2e, org.springframework.security.web.header.HeaderWriterFilter@4c6e3eaa, org.springframework.web.filter.CorsFilter@7b510fe3, org.springframework.security.web.authentication.logout.LogoutFilter@db9ab89, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@750e8153, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e89cc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ece6970, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c012258, org.springframework.security.web.session.SessionManagementFilter@c8bb6f6, org.springframework.security.web.access.ExceptionTranslationFilter@6029485a, org.springframework.security.web.access.intercept.AuthorizationFilter@7b815e4]
+2024-06-11T19:48:32.293+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T19:48:32.307+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-11T19:48:32.312+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 1.351 seconds (process running for 9953.561)
+2024-06-11T19:48:32.313+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsServiceImpl and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 3 matched 0 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-06-11T19:48:34.781+05:30  INFO 28200 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2024-06-11T19:48:34.805+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:48:34.806+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-06-11T19:48:34.829+05:30  INFO 28200 --- [networkticketingapplicationproject] [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-06-11T19:48:34.954+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 28200 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:48:34.955+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:48:35.164+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:48:35.193+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:48:35.291+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:48:35.291+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:48:35.292+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:48:35.317+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:48:35.317+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 360 ms
+2024-06-11T19:48:35.345+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:48:35.347+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:48:35.355+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:48:35.356+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-06-11T19:48:35.366+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3af8340f
+2024-06-11T19:48:35.367+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-06-11T19:48:35.368+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:48:35.424+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:48:35.454+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:48:35.772+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-11T19:48:35.773+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-11T19:48:35.848+05:30  WARN 28200 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:48:35.925+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1cf2da0a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f76d27, org.springframework.security.web.context.SecurityContextHolderFilter@3fa34a90, org.springframework.security.web.header.HeaderWriterFilter@3ed469c5, org.springframework.web.filter.CorsFilter@77354692, org.springframework.security.web.authentication.logout.LogoutFilter@13d1698a, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@4a9ef034, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64b004ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7937d3bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fca7aa0, org.springframework.security.web.session.SessionManagementFilter@4f50057c, org.springframework.security.web.access.ExceptionTranslationFilter@49425158, org.springframework.security.web.access.intercept.AuthorizationFilter@30cd0d51]
+2024-06-11T19:48:35.995+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T19:48:36.007+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-11T19:48:36.013+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 1.106 seconds (process running for 9957.263)
+2024-06-11T19:48:36.014+05:30  INFO 28200 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-06-11T19:49:33.347+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 11152 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:49:33.350+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:49:33.390+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-11T19:49:33.390+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-11T19:49:34.138+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:49:34.218+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:49:34.715+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:49:34.725+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:49:34.726+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:49:34.784+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:49:34.784+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1393 ms
+2024-06-11T19:49:34.892+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:49:34.959+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T19:49:34.987+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:49:35.357+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:49:35.388+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-11T19:49:35.654+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a0c44a9
+2024-06-11T19:49:35.657+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-11T19:49:35.704+05:30  WARN 11152 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:49:36.541+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:49:36.633+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:49:37.134+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-11T19:49:37.135+05:30  WARN 11152 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-11T19:49:37.254+05:30  WARN 11152 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:49:37.623+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e1535af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@483f7501, org.springframework.security.web.context.SecurityContextHolderFilter@57563d33, org.springframework.security.web.header.HeaderWriterFilter@4779ebdc, org.springframework.web.filter.CorsFilter@201046af, org.springframework.security.web.authentication.logout.LogoutFilter@3237c12b, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@1a78e8ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25f89b91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c87f87, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20524e7e, org.springframework.security.web.session.SessionManagementFilter@7d4edc14, org.springframework.security.web.access.ExceptionTranslationFilter@71fc88ca, org.springframework.security.web.access.intercept.AuthorizationFilter@4fc73367]
+2024-06-11T19:49:37.873+05:30  WARN 11152 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-06-11T19:49:37.903+05:30  WARN 11152 --- [networkticketingapplicationproject] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-06-11T19:49:37.907+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:49:37.911+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-11T19:49:37.921+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-11T19:49:37.938+05:30  INFO 11152 --- [networkticketingapplicationproject] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-11T19:49:37.960+05:30 ERROR 11152 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9090 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9090 or configure this application to listen on another port.
+
+2024-06-11T19:50:00.431+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 25032 (D:\nta\backend\target\classes started by prasannakumar.d in D:\nta\backend)
+2024-06-11T19:50:00.433+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:50:00.475+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-11T19:50:00.475+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-11T19:50:01.298+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:50:01.382+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
+2024-06-11T19:50:01.954+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-11T19:50:01.967+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T19:50:01.968+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T19:50:02.049+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-11T19:50:02.050+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1574 ms
+2024-06-11T19:50:02.200+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:50:02.312+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T19:50:02.359+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T19:50:02.642+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T19:50:02.669+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-11T19:50:02.913+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53f2da0c
+2024-06-11T19:50:02.917+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-11T19:50:02.984+05:30  WARN 25032 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-11T19:50:03.926+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T19:50:04.023+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:50:04.572+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-11T19:50:04.573+05:30  WARN 25032 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-11T19:50:04.696+05:30  WARN 25032 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:50:04.979+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2eafbc61, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75250e06, org.springframework.security.web.context.SecurityContextHolderFilter@58e43f66, org.springframework.security.web.header.HeaderWriterFilter@77b76c35, org.springframework.web.filter.CorsFilter@59051a5a, org.springframework.security.web.authentication.logout.LogoutFilter@7beb1b1e, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@571f268, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f8f9684, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69af35c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@612825db, org.springframework.security.web.session.SessionManagementFilter@2fb7a55c, org.springframework.security.web.access.ExceptionTranslationFilter@7ced6f19, org.springframework.security.web.access.intercept.AuthorizationFilter@41634654]
+2024-06-11T19:50:05.228+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T19:50:05.284+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-11T19:50:05.293+05:30  INFO 25032 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 5.444 seconds (process running for 6.506)
+2024-06-11T19:50:16.866+05:30  INFO 25032 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-11T19:50:16.866+05:30  INFO 25032 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-11T19:50:16.866+05:30  INFO 25032 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-06-11T19:50:18.541+05:30  INFO 25032 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1353 ms
+2024-06-11T19:50:59.395+05:30  INFO 25032 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AuthController          : User Signin

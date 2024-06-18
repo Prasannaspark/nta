@@ -30,3 +30,25 @@ label {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+.navbar {
+  background-color: #4078a5;
+}
+.custom-navbar {
+  background-color: #4078a5;
+}
+.navbar-brand{
+  color: #faf9f9;
+  font-family: Georgia;
+  font-size: 30px;
+}
+.nav-link{
+  color: #faf9f9;
+  font-family: Georgia;
+  font-size: large;
+}
+ 
+.navbar-brand:hover,
+.nav-link:hover {
+  color: #faf9f9; 
+}

@@ -3,6 +3,8 @@ package com.prodapt.networkticketingapplicationproject.controller;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +35,15 @@ public class SpecialistITSupportController {
 	@GetMapping("/critical")
 	public ResponseEntity<List<Ticket>> getCriticalTicket() throws TicketNotFoundException {
 		List<Ticket> tP = ticketService.getCriticalTickets();
+		List<Ticket> highprilowsevgoldtype=ticketService.highprilowsevgold();
+		
+		
+		
+	List<Ticket> combinedList = Stream.concat(tP.stream(),highprilowsevgoldtype.stream())
+     .collect(Collectors.toList());
+		
 		loggers.info("critical");
-		return new ResponseEntity<>(tP, HttpStatus.OK);
+		return new ResponseEntity<>(combinedList, HttpStatus.OK);
 
 	}
 	

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -69,60 +69,71 @@ const Login = () => {
   };
 
   return (
-    <div className="col-md-12">
-      <div className="card card-container">
-        <img
-          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-          alt="profile-img"
-          className="profile-img-card"
-        />
-
-        <Form onSubmit={handleLogin} ref={form}>
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <Input
-              type="text"
-              className="form-control"
-              name="username"
-              value={username}
-              onChange={onChangeUsername}
-              validations={[required]}
+      <div className="container-fluid vh-100 d-flex align-items-center justify-content-center" style={{ color: 'white' }}>
+        <div className="card p-4 shadow-lg border-0 rounded-3" style={{ maxWidth: '400px', width: '100%', backgroundColor: 'white', color: '#4078a5', fontFamily: 'Georgia' }}>
+          <div className="card-body">
+            <h3 className="card-title text-center mb-4" style={{color: '#4078a5'}}>Sign In</h3>
+            <img
+              src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+              alt="profile-img"
+              className="profile-img-card rounded-circle mx-auto d-block mb-3"
+              style={{ width: "100px", height: "100px" }}
             />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <Input
-              type="password"
-              className="form-control"
-              name="password"
-              value={password}
-              onChange={onChangePassword}
-              validations={[required]}
-            />
-          </div>
-
-          <div className="form-group">
-            <button className="btn btn-primary btn-block" disabled={loading}>
-              {loading && (
-                <span className="spinner-border spinner-border-sm"></span>
-              )}
-              <span>Login</span>
-            </button>
-          </div>
-
-          {message && (
-            <div className="form-group">
-              <div className="alert alert-danger" role="alert">
-                {message}
+   
+            <Form onSubmit={handleLogin} ref={form}>
+              <div className="form-group mb-3">
+                <label htmlFor="username" className="form-label" style={{ fontFamily: 'Georgia', color:'#4078a5'}}>Username</label>
+                <Input
+                  type="text"
+                  className="form-control rounded-pill"
+                  name="username"
+                  value={username}
+                  onChange={onChangeUsername}
+                  validations={[required]}
+                  style={{ backgroundColor: '#f0f0f0', color: '#001f3f' }}
+                />
               </div>
+   
+              <div className="form-group mb-3">
+                <label htmlFor="password" className="form-label" style={{ fontFamily: 'Georgia', color:'#4078a5'}}>Password</label>
+                <Input
+                  type="password"
+                  className="form-control rounded-pill"
+                  name="password"
+                  value={password}
+                  onChange={onChangePassword}
+                  validations={[required]}
+                  style={{ backgroundColor: '#f0f0f0', color: '#001f3f' }}
+                />
+              </div>
+   
+              <div className="d-grid mb-3">
+                <button className="btn btn-primary btn-block rounded-pill" disabled={loading} style={{ backgroundColor: '#4078a5', borderColor: '#4078a5', fontFamily:'Georgia', color: '#f4eeff' }}>
+                  {loading && (
+                    <span className="spinner-border spinner-border-sm"></span>
+                  )}
+                  <span>Login</span>
+                </button>
+              </div>
+   
+              {message && (
+                <div className="form-group mt-3">
+                  <div className="alert alert-danger" role="alert">
+                    {message}
+                  </div>
+                </div>
+              )}
+              <CheckButton style={{ display: "none" }} ref={checkBtn} />
+            </Form>
+          </div>
+          <div className="card-footer text-center">
+            <div className="small" style={{ fontFamily: 'Georgia'}}>
+              Don't have an account? <Link to="/register" className="#" style={{color: '#4078a5', fontFamily: 'Georgia'}}>Sign up</Link>
             </div>
-          )}
-          <CheckButton style={{ display: "none" }} ref={checkBtn} />
-        </Form>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Login;
+    );
+  };
+   
+  export default Login;

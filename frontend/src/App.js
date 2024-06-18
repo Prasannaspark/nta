@@ -71,9 +71,9 @@ const App = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav className="navbar fixed-top navbar-expand custom-navbar">
         <Link to={"/"} className="navbar-brand">
-          Network Ticketing Application
+          NETWORK TIKETING APPLICATION
         </Link>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
@@ -197,7 +197,10 @@ const App = () => {
         </Routes>
       </div>
 
+
     </div>
+
+    
   );
 };
 

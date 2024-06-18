@@ -1,8 +1,9 @@
 package com.prodapt.networkticketingapplicationproject.controller;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,13 +16,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.prodapt.networkticketingapplicationproject.entities.Ticket;
 import com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException;
 import com.prodapt.networkticketingapplicationproject.requestentities.GetByTicketId;
 import com.prodapt.networkticketingapplicationproject.requestentities.TicketUpdateIT;
 import com.prodapt.networkticketingapplicationproject.service.TicketService;
-
 @RestController
 @RequestMapping("/api/capable")
 @CrossOrigin(origins="*", maxAge=3600)
@@ -34,8 +33,14 @@ public class CapableITSupportController {
 	@GetMapping("/urgentbutnotsevere")
 	public ResponseEntity<List<Ticket>> getUrgentButNotCriticalTicket() throws TicketNotFoundException {
 		List<Ticket> tP = ticketService.getUrgentButNotCriticalTickets();
+		List<Ticket> hpls=ticketService.highprilowsev(); 
+		
+		
+	List<Ticket> combinedList = Stream.concat(tP.stream(), hpls.stream())
+     .collect(Collectors.toList());
+
 		loggers.info("urgentbutnotsevere");
-		return new ResponseEntity<>(tP, HttpStatus.OK);
+		return new ResponseEntity<>(combinedList, HttpStatus.OK);
 	}
 
 	@GetMapping("/noturgentbutcritical")
@@ -44,6 +49,7 @@ public class CapableITSupportController {
 		loggers.info("noturgentbutcritical");
 		return new ResponseEntity<>(tP, HttpStatus.OK);
 	}
+	
 	@PostMapping("/updateticket")
 	public ResponseEntity<Ticket> updateTicket(@RequestBody TicketUpdateIT req) throws TicketNotFoundException
 	{

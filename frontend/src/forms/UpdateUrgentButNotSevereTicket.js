@@ -48,16 +48,20 @@ function UpdateUrgentButNotSevereTicket() {
   };
  
   return (
-    <div className="auth-container">
-      <h2>Update Ticket</h2>
+    <div className="auth-container mt-5 pt-5">
+      <h2>UPDATE TICKET</h2>
       <form onSubmit={handleSubmit}>
 
         <div className="mb-3">
             <label htmlFor="status" className="form-label">Status : </label>
-            <input type="text" className="form-control" id="status" name="status" value={ticketData.status || ''} onChange={handleInputChange} required />
-          </div>
+            <select className="form-select" id="status" name="status" value={ticketData.status || ''} onChange={handleInputChange} required>
+            <option value="">Update Status</option>
+            <option value="CLOSE">CLOSE</option>
           
-        <button type="submit">Update</button>
+          </select>
+            </div>
+          
+        <button type="submit">UPDATE</button>
 
 
       </form>

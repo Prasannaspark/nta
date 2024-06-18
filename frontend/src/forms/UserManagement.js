@@ -1,13 +1,14 @@
 import AdminService from '../services/AdminService';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import {  useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './UserManagement.css';
+
 const UserManagement = () => {
     const [users, setUsers] = useState([]);
    
     useEffect(() => {
-      fetchUsers();
+        fetchUsers();
     }, []);
 
     const fetchUsers = () => {
@@ -19,38 +20,43 @@ const UserManagement = () => {
           .catch(error => {
             console.error('Error fetching users : ', error);
           });
-      };
-return (
-    <div className="container">
-      <h2>Users</h2>
-        <table className="table mt-4">
-                <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>Username</th>
-                    <th>Password_Hash</th>
-                    <th>Email</th>
-                    <th>Role ID</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {users.map(user => (
-                    <tr key={user.id}>
-                    <td>{user.id}</td>
-                    <td>{user.username}</td>
-                    <td>{user.password}</td>
-                    <td>{user.email}</td>
-                    <td>{user.role.id}</td>
-                    <td>
-                        <button><Link to={`/update-userrole/${user.id}`}> Update </Link></button>
-                    </td>
-                    </tr>
-                ))}
-                </tbody>
-            </table>
+    };
+      
+    return (
+        <div className="container mt-5 pt-5">
+            <h2 className="text-center mb-5 pt-3">USERS</h2>
+            <div className="table-responsive">
+                <table className="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Password_Hash</th>
+                            <th>Email</th>
+                            <th>Role ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {users.map(user => (
+                            <tr key={user.id}>
+                                <td>{user.id}</td>
+                                <td>{user.username}</td>
+                                <td>{user.password}</td>
+                                <td>{user.email}</td>
+                                <td>{user.role.id}</td>
+                                <td>
+                                <button class="btn btn-success"><Link to={`/update-userrole/${user.id}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                        Update
+                                    </Link></button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
-        );
+        </div>
+    );
 };
 
 export default UserManagement;

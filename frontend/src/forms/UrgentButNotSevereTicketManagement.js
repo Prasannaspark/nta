@@ -34,10 +34,8 @@ const fetchTicket = async (ticketId) => {
   };
 
   return (
-    <div className="container">
-      
-
-      <table className="table mt-4">
+    <div className="container mt-5 pt-3">
+      <table className="table table-striped table-hover mt-4">
         <thead>
           <tr>
             <th>Ticket ID</th>
@@ -67,26 +65,60 @@ const fetchTicket = async (ticketId) => {
               <td>{ticket.creationDate}</td>
               <td>{ticket.lastUpdated}</td>
               <td>
-                <button className="btn btn-primary" onClick={() => fetchTicket(ticket.ticketId)}>View</button>
-                <button><Link to={`/update-urgentbutnotsevere-ticket/${ticket.ticketId}`}> Update </Link></button>
+                <button className="btn btn-default" onClick={() => fetchTicket(ticket.ticketId)}>View</button>
+                <button className="btn btn-default"><Link to={`/update-urgentbutnotsevere-ticket/${ticket.ticketId}`}> Update </Link></button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       {selectedTicket && (
-        <div>
-          <h3>Ticket Details :</h3>
-          <p>Title : {selectedTicket.title}</p>
-          <p>Description : {selectedTicket.description}</p>
-          <p>Priority : {selectedTicket.priority}</p>
-          <p>Severity : {selectedTicket.severity}</p>
-          <p>CustomerTier : {selectedTicket.customerTier}</p>
-          <p>IssueType : {selectedTicket.issueType}</p>
-          <p>Status : {selectedTicket.status}</p>
-          <p>Creation Date :{selectedTicket.creationDate}</p>
-          <p>Last Updated:{selectedTicket.lastUpdated}</p>
-
+        <div className="mt-5">
+          <h3>Selected Ticket Details</h3>
+          <table className="table table-striped table-bordered">
+            <tbody>
+              <tr>
+                <td>Ticket ID</td>
+                <td>{selectedTicket.ticketId}</td>
+              </tr>
+              <tr>
+                <td>Title</td>
+                <td>{selectedTicket.title}</td>
+              </tr>
+              <tr>
+                <td>Description</td>
+                <td>{selectedTicket.description}</td>
+              </tr>
+              <tr>
+                <td>Priority</td>
+                <td>{selectedTicket.priority}</td>
+              </tr>
+              <tr>
+                <td>Severity</td>
+                <td>{selectedTicket.severity}</td>
+              </tr>
+              <tr>
+                <td>Customer Tier</td>
+                <td>{selectedTicket.customerTier}</td>
+              </tr>
+              <tr>
+                <td>Issue Type</td>
+                <td>{selectedTicket.issueType}</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>{selectedTicket.status}</td>
+              </tr>
+              <tr>
+                <td>Creation Date</td>
+                <td>{selectedTicket.creationDate}</td>
+              </tr>
+              <tr>
+                <td>Last Updated</td>
+                <td>{selectedTicket.lastUpdated}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       )}
     </div>

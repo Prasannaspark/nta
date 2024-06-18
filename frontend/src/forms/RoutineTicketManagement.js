@@ -34,10 +34,8 @@ const fetchTicket = async (ticketId) => {
   };
 
   return (
-    <div className="container">
-      
-
-      <table className="table mt-4">
+    <div className="container mt-5 pt-5">
+      <table className="table table-striped table-bordered">
         <thead>
           <tr>
             <th>Ticket ID</th>
@@ -67,28 +65,58 @@ const fetchTicket = async (ticketId) => {
               <td>{ticket.creationDate}</td>
               <td>{ticket.lastUpdated}</td>
               <td>
-                <button className="btn btn-primary" onClick={() => fetchTicket(ticket.ticketId)}>View</button>
-                <button><Link to={`/update-routine-ticket/${ticket.ticketId}`}> Update </Link></button>
+                <button className="btn btn-default" onClick={() => fetchTicket(ticket.ticketId)}>View</button>
+                <button className="btn btn-default"><Link to={`/update-routine-ticket/${ticket.ticketId}`}> Update </Link></button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       {selectedTicket && (
-        <div>
-          <h3>Ticket Details :</h3>
-          <p>Title : {selectedTicket.title}</p>
-          <p>Description : {selectedTicket.description}</p>
-          <p>Priority : {selectedTicket.priority}</p>
-          <p>Severity : {selectedTicket.severity}</p>
-          <p>CustomerTier : {selectedTicket.customerTier}</p>
-          <p>IssueType : {selectedTicket.issueType}</p>
-          <p>Status : {selectedTicket.status}</p>
-          <p>Creation Date :{selectedTicket.creationDate}</p>
-          <p>Last Updated:{selectedTicket.lastUpdated}</p>
-
-        </div>
-      )}
+  <div>
+    <h3>Ticket Details :</h3>
+    <table className="table table-striped table-bordered">
+      <tbody>
+        <tr>
+          <th>Title</th>
+          <td>{selectedTicket.title}</td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td>{selectedTicket.description}</td>
+        </tr>
+        <tr>
+          <th>Priority</th>
+          <td>{selectedTicket.priority}</td>
+        </tr>
+        <tr>
+          <th>Severity</th>
+          <td>{selectedTicket.severity}</td>
+        </tr>
+        <tr>
+          <th>Customer Tier</th>
+          <td>{selectedTicket.customerTier}</td>
+        </tr>
+        <tr>
+          <th>Issue Type</th>
+          <td>{selectedTicket.issueType}</td>
+        </tr>
+        <tr>
+          <th>Status</th>
+          <td>{selectedTicket.status}</td>
+        </tr>
+        <tr>
+          <th>Creation Date</th>
+          <td>{selectedTicket.creationDate}</td>
+        </tr>
+        <tr>
+          <th>Last Updated</th>
+          <td>{selectedTicket.lastUpdated}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+)}
     </div>
   );
 };

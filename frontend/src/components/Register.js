@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import{Link} from 'react-router-dom';
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -56,10 +57,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [successful, setSuccessful] = useState(false);
   const [message, setMessage] = useState("");
-  // const [mobile, setMobile] = useState("");
-  // const [address, setAddress] = useState("");
-  // const [gender, setGender] = useState("");
-  // const [role, setRole] = useState(null);
 
   const onChangeUsername = (e) => {
     const username = e.target.value;
@@ -75,20 +72,7 @@ const Register = () => {
     const password = e.target.value;
     setPassword(password);
   };
-
-  // const onChangeMobile = (e) => {
-  //   const mobile = e.target.value;
-  //   setMobile(mobile);
-  // };
-  // const onChangeGender = (e) => {
-  //   const gender = e.target.value;
-  //   setGender(gender);
-  // };
-
-  // const onChangeAddress = (e) => {
-  //   const address = e.target.value;
-  //   setAddress(address);
-  // };
+  
   const handleRegister = (e) => {
     e.preventDefault();
 
@@ -119,22 +103,25 @@ const Register = () => {
   };
 
   return (
-    <div className="col-md-12">
-      <div className="card card-container">
-        <img
-          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-          alt="profile-img"
-          className="profile-img-card"
-        />
+    <div className="container-fluid vh-100 d-flex align-items-center justify-content-center" style={{ color: 'white' }}>
+      <div className="card p-4 shadow-lg border-0 rounded-3" style={{ maxWidth: '400px', width: '100%', backgroundColor: 'white', color: '#4078a5' }}>
+        <div className="card-body">
+          <h3 className="card-title text-center mb-4" style={{ fontFamily: 'Georgia', color:'#4078a5'}}>Sign Up</h3>
+          <img
+            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+            alt="profile-img"
+            className="profile-img-card rounded-circle mx-auto d-block mb-3"
+            style={{ width: "100px", height: "100px" }}
+          />
 
         <Form onSubmit={handleRegister} ref={form}>
           {!successful && (
             <div>
               <div className="form-group">
-                <label htmlFor="username">Username</label>
+                <label htmlFor="username"className="form-label"  style={{ fontFamily: 'Georgia', color:'#4078a5'}}>Username</label>
                 <Input
                   type="text"
-                  className="form-control"
+                  className="form-control rounded-pill"
                   name="username"
                   value={username}
                   onChange={onChangeUsername}
@@ -143,10 +130,10 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className="form-label"  style={{ fontFamily: 'Georgia', color:'#4078a5'}}>Email</label>
                 <Input
                   type="text"
-                  className="form-control"
+                  className="form-control rounded-pill"
                   name="email"
                   value={email}
                   onChange={onChangeEmail}
@@ -155,54 +142,25 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" className="form-label"  style={{ fontFamily: 'Georgia', color:'#4078a5'}}>Password</label>
                 <Input
                   type="password"
-                  className="form-control"
+                  className="form-control rounded-pill"
                   name="password"
                   value={password}
                   onChange={onChangePassword}
                   validations={[required, vpassword]}
                 />
               </div>
-
-              {/* <div className="form-group">
-                <label htmlFor="mobile">Mobile</label>
-                <Input
-                  type="text"
-                  className="form-control"
-                  name="mobile"
-                  value={mobile}
-                  onChange={onChangeMobile}
-                  validations={[required, vmobile]}
-                />
+              <div className="d-grid mb-3">
+                  <button className="btn btn-primary btn-block rounded-pill" style={{ backgroundColor: '#4078a5', borderColor: '#4078a5', fontFamily: 'Georgia' , color: '#f4eeff'}}>Sign Up</button>
+                </div>
+                <div className="card-footer text-center">
+                <div className="small"  style={{ fontFamily: 'Georgia'}}>
+                Already have an account? <Link to="/login" className="#" style={{color: '#4078a5', fontFamily: 'Georgia'}}>Sign in</Link>
+                </div>
               </div>
-              <div className="form-group">
-                <label htmlFor="gender">Gender</label>
-                <Input
-                  type="text"
-                  className="form-control"
-                  name="gender"
-                  value={gender}
-                  onChange={onChangeGender}
-                  validations={[required]}
-                />
               </div>
-              <div className="form-group">
-                <label htmlFor="address">Address</label>
-                <Input
-                  type="text"
-                  className="form-control"
-                  name="address"
-                  value={address}
-                  onChange={onChangeAddress}
-                  validations={[required]}
-                />
-              </div> */}
-              <div className="form-group">
-                <button className="btn btn-primary btn-block">Sign Up</button>
-              </div>
-            </div>
           )}
 
           {message && (
@@ -219,6 +177,7 @@ const Register = () => {
           )}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
+      </div>
       </div>
     </div>
   );

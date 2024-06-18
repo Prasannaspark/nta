@@ -39,5 +39,13 @@ public interface TicketService {
 	public List<Ticket> getTwentyFourPlusAgedTickets() throws TicketNotFoundException;
 	
 	public List<Ticket> getOpenTickets()throws TicketNotFoundException;
+	
+	public List<Ticket> prilowsevmedium()throws TicketNotFoundException;
+	
+	public List<Ticket> highprilowsev()throws TicketNotFoundException;
+	
+	List<Ticket> highprilowsevgold()throws TicketNotFoundException;
+	
+	
 
 }

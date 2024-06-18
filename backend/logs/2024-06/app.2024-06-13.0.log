@@ -1,0 +1,349 @@
+2024-06-13T09:30:49.717+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 12380 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-06-13T09:30:49.730+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-13T09:30:49.801+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13T09:30:49.802+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13T09:30:50.860+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13T09:30:50.955+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2024-06-13T09:30:51.486+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-13T09:30:51.498+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-13T09:30:51.498+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13T09:30:51.573+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-13T09:30:51.574+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1771 ms
+2024-06-13T09:30:51.723+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13T09:30:51.801+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13T09:30:51.846+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-13T09:30:52.251+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13T09:30:52.285+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-13T09:30:52.630+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38a05ef5
+2024-06-13T09:30:52.633+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-13T09:30:52.703+05:30  WARN 12380 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-13T09:30:53.706+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13T09:30:53.917+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T09:30:54.422+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-13T09:30:54.423+05:30  WARN 12380 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-13T09:30:54.559+05:30  WARN 12380 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13T09:30:54.809+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75e96141, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@228baa2b, org.springframework.security.web.context.SecurityContextHolderFilter@4f201e8d, org.springframework.security.web.header.HeaderWriterFilter@95cfd0d, org.springframework.web.filter.CorsFilter@3b45dd76, org.springframework.security.web.authentication.logout.LogoutFilter@69fac33, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@7ca863ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@375b75db, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3262db27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fa93005, org.springframework.security.web.session.SessionManagementFilter@15083c53, org.springframework.security.web.access.ExceptionTranslationFilter@6256134b, org.springframework.security.web.access.intercept.AuthorizationFilter@5170d8b7]
+2024-06-13T09:30:55.387+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-13T09:30:55.531+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-13T09:30:55.546+05:30  INFO 12380 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 6.381 seconds (process running for 8.277)
+2024-06-13T09:38:03.303+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13T09:38:03.303+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-13T09:38:03.318+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2024-06-13T09:38:03.999+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T09:38:04.316+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T09:39:46.291+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-06-13T09:39:48.435+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T09:40:01.377+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T09:40:48.531+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-06-13T09:41:24.141+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.AdminController         : getall
+2024-06-13T09:41:47.746+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-06-13T09:41:49.306+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T09:41:53.906+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T09:42:27.122+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T09:42:42.022+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T09:42:45.122+05:30  INFO 12380 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T10:48:36.743+05:30  WARN 12380 --- [networkticketingapplicationproject] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m13s29ms830µs900ns).
+2024-06-13T10:49:31.967+05:30  INFO 12380 --- [networkticketingapplicationproject] [RMI TCP Connection(67)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-06-13T10:49:31.994+05:30  INFO 12380 --- [networkticketingapplicationproject] [RMI TCP Connection(67)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T10:49:31.997+05:30  INFO 12380 --- [networkticketingapplicationproject] [RMI TCP Connection(67)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-13T10:49:32.005+05:30  INFO 12380 --- [networkticketingapplicationproject] [RMI TCP Connection(67)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-13T10:49:34.330+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 25484 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-06-13T10:49:34.333+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-13T10:49:34.371+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13T10:49:34.372+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13T10:49:35.070+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13T10:49:35.144+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2024-06-13T10:49:35.542+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-13T10:49:35.549+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-13T10:49:35.549+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13T10:49:35.598+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-13T10:49:35.599+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1227 ms
+2024-06-13T10:49:35.687+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13T10:49:35.724+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13T10:49:35.752+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-13T10:49:35.956+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13T10:49:35.979+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-13T10:49:36.184+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7158e511
+2024-06-13T10:49:36.186+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-13T10:49:36.229+05:30  WARN 25484 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-13T10:49:36.956+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13T10:49:37.065+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T10:49:37.417+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-13T10:49:37.419+05:30  WARN 25484 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-13T10:49:37.519+05:30  WARN 25484 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13T10:49:37.753+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48cd374b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4234a03e, org.springframework.security.web.context.SecurityContextHolderFilter@1895638c, org.springframework.security.web.header.HeaderWriterFilter@25687959, org.springframework.web.filter.CorsFilter@5fbb9200, org.springframework.security.web.authentication.logout.LogoutFilter@76865a8, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@1837b636, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@317c42e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@127f4c79, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cfdc6ed, org.springframework.security.web.session.SessionManagementFilter@1deadf9d, org.springframework.security.web.access.ExceptionTranslationFilter@6d1f767f, org.springframework.security.web.access.intercept.AuthorizationFilter@71df7591]
+2024-06-13T10:49:37.935+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-13T10:49:37.984+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-13T10:49:37.996+05:30  INFO 25484 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 4.004 seconds (process running for 4.726)
+2024-06-13T10:51:12.677+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13T10:51:12.677+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-13T10:51:12.685+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-06-13T10:54:01.294+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.AuthController          : User Signin
+2024-06-13T11:01:14.750+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.AdminController         : getall
+2024-06-13T11:13:58.955+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.AuthController          : User Signin
+2024-06-13T11:14:06.193+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AdminController         : getall
+2024-06-13T11:14:43.175+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.AdminController         : getall
+2024-06-13T11:21:48.919+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.AdminController         : getall
+2024-06-13T11:22:56.892+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AdminController         : getall
+2024-06-13T11:23:18.521+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.AdminController         : getall
+2024-06-13T11:32:14.823+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.AdminController         : getall
+2024-06-13T11:34:12.792+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.AdminController         : getall
+2024-06-13T11:37:41.978+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.AdminController         : getall
+2024-06-13T12:09:28.674+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.AuthController          : User Signin
+2024-06-13T12:09:30.298+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:09:38.915+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:15:20.376+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:15:28.983+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:15:33.518+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:15:39.290+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:16:28.862+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:16:29.856+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:17:20.072+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:18:59.274+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:19:01.888+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:19:12.712+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:19:14.977+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:19:16.906+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : updateticket
+2024-06-13T12:19:16.939+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:19:18.428+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:19:21.600+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:21:08.528+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:21:25.862+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:21:36.008+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:21:37.500+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:22:08.833+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:22:59.122+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:23:36.034+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:23:52.850+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:24:10.848+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:24:14.650+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:24:16.433+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:25:22.221+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.CustomerController      : updateticket
+2024-06-13T12:25:22.247+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:25:23.632+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:25:25.262+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:25:30.590+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:25:32.747+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:27:29.857+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:28:34.404+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:31:24.434+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getticket
+2024-06-13T12:33:22.372+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:33:46.225+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.AuthController          : User Signin
+2024-06-13T12:33:55.451+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:34:13.507+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:38:08.919+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:38:10.287+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:38:11.344+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:38:20.587+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:38:24.031+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:39:35.862+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:39:41.618+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:39:44.601+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:39:47.734+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:39:50.340+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:39:53.051+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:39:56.962+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:39:59.043+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:40:00.132+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:40:00.805+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:40:01.872+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T12:40:41.965+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:41:14.568+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:41:28.860+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:41:36.484+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:41:45.118+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:41:47.773+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:42:12.854+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:42:15.527+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:42:35.863+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:42:47.860+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:42:55.643+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:43:56.845+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:43:59.805+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:44:01.361+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:44:02.220+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:45:49.250+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:45:51.076+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:45:53.411+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T12:45:54.719+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T12:46:04.785+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-06-13T12:46:08.521+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:46:09.956+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:46:14.869+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:46:15.857+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:46:17.001+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:46:17.447+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:46:25.881+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:46:26.492+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:49:31.220+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:50:52.840+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:51:02.838+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:51:10.842+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:54:04.482+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.AuthController          : User Signin
+2024-06-13T12:54:07.288+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:54:29.407+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : addticket
+2024-06-13T12:54:30.616+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:54:30.626+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T12:54:46.834+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-06-13T12:54:48.712+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T12:55:04.008+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.AuthController          : User Signin
+2024-06-13T12:55:05.224+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:55:06.707+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T12:55:34.846+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T12:55:51.862+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T12:55:55.386+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.CapableITSupportController       : getticket
+2024-06-13T12:55:57.971+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:56:00.236+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T12:56:02.358+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.CapableITSupportController       : getticket
+2024-06-13T12:56:59.826+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.CapableITSupportController       : getticket
+2024-06-13T12:57:07.807+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T12:57:08.842+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T12:57:47.543+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T12:57:48.845+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.CapableITSupportController       : getticket
+2024-06-13T12:58:00.750+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.AuthController          : User Signin
+2024-06-13T12:58:02.097+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T12:58:03.647+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T12:58:09.747+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T12:58:23.842+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T12:58:42.824+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T12:58:56.844+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T12:59:02.605+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T12:59:03.840+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T12:59:34.309+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:00:05.325+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:00:46.409+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AdminController         : getall
+2024-06-13T13:01:13.060+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:01:17.427+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T13:01:37.292+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:01:39.903+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T13:01:41.314+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:03:38.319+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:03:40.237+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:03:43.234+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.CustomerController      : getticket
+2024-06-13T13:04:41.379+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:04:43.740+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T13:04:46.330+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:04:48.997+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:04:49.283+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:04:49.448+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:05:15.491+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:05:17.002+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:05:18.851+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getticket
+2024-06-13T13:07:40.832+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:08:01.836+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.CustomerController      : getticket
+2024-06-13T13:08:24.743+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:08:30.187+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.AdminController         : getall
+2024-06-13T13:08:36.888+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:08:39.475+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.SpecialistITSupportController    : critical
+2024-06-13T13:08:41.569+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.SpecialistITSupportController    : getticket
+2024-06-13T13:08:51.084+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:08:52.957+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T13:08:54.484+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T13:08:56.492+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T13:09:04.706+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:09:07.237+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T13:09:08.073+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T13:09:11.386+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T13:09:12.282+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T13:09:22.989+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T13:09:23.449+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T13:09:33.343+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:09:38.574+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:09:54.463+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : addticket
+2024-06-13T13:09:55.369+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:09:55.371+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:10:02.195+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:10:03.362+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T13:10:04.090+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T13:11:51.875+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:11:53.403+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:12:08.699+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : addticket
+2024-06-13T13:12:09.637+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:12:09.646+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T13:12:18.600+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-06-13T13:12:20.406+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.CapableITSupportController       : noturgentbutcritical
+2024-06-13T13:12:22.463+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.CapableITSupportController       : getticket
+2024-06-13T13:13:01.867+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.CapableITSupportController       : noturgentbutcritical
+2024-06-13T14:44:35.948+05:30  WARN 25484 --- [networkticketingapplicationproject] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h31m27s712ms732µs400ns).
+2024-06-13T15:28:33.425+05:30  WARN 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-06-13T15:28:56.217+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.AuthController          : User Signin
+2024-06-13T15:28:57.823+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T15:29:17.553+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : addticket
+2024-06-13T15:29:18.642+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T15:29:18.642+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T15:29:26.872+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AuthController          : User Signin
+2024-06-13T15:29:28.245+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T15:29:30.064+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.CapableITSupportController       : getticket
+2024-06-13T15:29:59.749+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.c.CapableITSupportController       : urgentbutnotsevere
+2024-06-13T15:30:03.205+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.CapableITSupportController       : noturgentbutcritical
+2024-06-13T15:30:04.644+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.c.CapableITSupportController       : getticket
+2024-06-13T15:30:36.157+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-06-13T15:30:38.184+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.c.AvailabeITSupportController      : minor
+2024-06-13T15:30:39.630+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T15:30:41.336+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.c.AvailabeITSupportController      : routine
+2024-06-13T15:30:42.430+05:30  INFO 25484 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.c.AvailabeITSupportController      : getticket
+2024-06-13T17:22:54.692+05:30  WARN 25484 --- [networkticketingapplicationproject] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s422ms571µs400ns).
+2024-06-13T17:23:03.087+05:30  INFO 25484 --- [networkticketingapplicationproject] [RMI TCP Connection(307)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-06-13T17:23:03.154+05:30  INFO 25484 --- [networkticketingapplicationproject] [RMI TCP Connection(307)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T17:23:03.161+05:30  INFO 25484 --- [networkticketingapplicationproject] [RMI TCP Connection(307)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-13T17:23:03.171+05:30  INFO 25484 --- [networkticketingapplicationproject] [RMI TCP Connection(307)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-13T19:14:24.383+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 20052 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-06-13T19:14:24.385+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-06-13T19:14:24.425+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13T19:14:24.425+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13T19:14:25.251+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13T19:14:25.314+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2024-06-13T19:14:25.802+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-13T19:14:25.814+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-13T19:14:25.814+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13T19:14:25.882+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-13T19:14:25.882+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1456 ms
+2024-06-13T19:14:26.010+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13T19:14:26.070+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13T19:14:26.101+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-13T19:14:26.412+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13T19:14:26.437+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-13T19:14:26.740+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@503d2a65
+2024-06-13T19:14:26.743+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-13T19:14:26.787+05:30  WARN 20052 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-13T19:14:27.621+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13T19:14:27.715+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T19:14:28.040+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-13T19:14:28.041+05:30  WARN 20052 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-13T19:14:28.134+05:30  WARN 20052 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13T19:14:28.352+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20180fe6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24a09195, org.springframework.security.web.context.SecurityContextHolderFilter@2f5c7f81, org.springframework.security.web.header.HeaderWriterFilter@43a6d326, org.springframework.web.filter.CorsFilter@365bf235, org.springframework.security.web.authentication.logout.LogoutFilter@7f4abc5c, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@485177a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64d5c25c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@299cf3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69b52c4a, org.springframework.security.web.session.SessionManagementFilter@175fe618, org.springframework.security.web.access.ExceptionTranslationFilter@58960fa7, org.springframework.security.web.access.intercept.AuthorizationFilter@548a16d6]
+2024-06-13T19:14:28.568+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-13T19:14:28.612+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-06-13T19:14:28.621+05:30  INFO 20052 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 4.694 seconds (process running for 5.803)
+2024-06-13T19:15:00.379+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13T19:15:00.380+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-13T19:15:00.383+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-13T19:15:24.687+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.AuthController          : User Signin
+2024-06-13T19:15:33.264+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AuthController          : User Signin
+2024-06-13T19:16:08.823+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.AdminController         : getall
+2024-06-13T19:21:17.203+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AuthController          : User Signin
+2024-06-13T19:22:00.187+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.AuthController          : User Signin
+2024-06-13T19:44:04.491+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.AuthController          : User Signin
+2024-06-13T19:45:27.329+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AdminController         : getall
+2024-06-13T19:52:19.421+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.AdminController         : getall
+2024-06-13T19:53:33.390+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-06-13T19:53:41.542+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T19:55:06.378+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T19:55:19.894+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T19:55:54.396+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T19:56:25.544+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T19:56:37.635+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T20:00:18.589+05:30  WARN 20052 --- [networkticketingapplicationproject] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s47ms859µs800ns).
+2024-06-13T20:29:05.928+05:30  WARN 20052 --- [networkticketingapplicationproject] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m47s338ms983µs).
+2024-06-13T20:34:44.025+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : addticket
+2024-06-13T20:34:44.999+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T20:34:45.002+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T20:48:28.342+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-9] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T21:00:34.719+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T21:00:38.140+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : getticket
+2024-06-13T21:02:01.969+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : updateticket
+2024-06-13T21:02:01.998+05:30  INFO 20052 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.CustomerController      : getmytickets
+2024-06-13T21:14:42.831+05:30  INFO 20052 --- [networkticketingapplicationproject] [RMI TCP Connection(95)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-06-13T21:14:42.857+05:30  INFO 20052 --- [networkticketingapplicationproject] [RMI TCP Connection(95)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13T21:14:42.861+05:30  INFO 20052 --- [networkticketingapplicationproject] [RMI TCP Connection(95)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-13T21:14:42.867+05:30  INFO 20052 --- [networkticketingapplicationproject] [RMI TCP Connection(95)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import AdminService from '../services/AdminService';
- 
+import './UpdateUser.css'
+
 function UpdateUser() {
   const navigate = useNavigate();
-
+  const {id} = useParams;
   const [userData, setUserData] = useState({
     id: '',
     role: ''
   });
+
+  useEffect(() => {
+    fetchUserDataById(id);
+  }, [id]);
+ 
+  const fetchUserDataById = async (id) => {
+    try {
+      const response = await AdminService.getUser(id);
+      if (response) {
+        setUserData(response);
+      } else {
+        console.error('Error: User data is undefined.');
+      }
+    } catch (error) {
+      console.error('Error fetching user data : ', error);
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -30,25 +48,39 @@ function UpdateUser() {
   };
 
   return (
-    <div className="auth-container">
-      <h2>Update User Role</h2>
+    <div className="auth-container mt-5 pt-5">
+      <h2>UPDATE ROLE</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>User ID :</label>
-          <input type="number" name="id" value={userData.id } onChange={handleInputChange} />
+          <input
+            type="number"
+            name="userId"
+            value={userData.userId || ''}
+            onChange={handleInputChange}
+            required
+          />
         </div>
         <div className="form-group">
-        <label htmlFor="role" className="form-label">Role :</label>
-            <select className="form-select" id="role" name="role" value={userData.role} onChange={handleInputChange} required>
+          <label>Role :</label>
+          <select
+            name="role"
+            value={userData.role}
+            onChange={handleInputChange}
+            required
+          >
               <option value="">Select Role</option>
-              <option value="ROLE_ADMIN">ROLE_ADMIN</option>
-              <option value="ROLE_SPECIALIST_ITSUPPORT">ROLE_SPECIALIST_ITSUPPORT</option>
-              <option value="ROLE_CAPABLE_ITSUPPORT">ROLE_CAPABLE_ITSUPPORT</option>
-              <option value="ROLE_AVAILABLE_ITSUPPORT">ROLE_AVAILABLE_ITSUPPORT</option>
-              <option value="ROLE_USER">ROLE_USER</option>
-            </select>
+              <option value="ROLE_ADMIN">ROLE ADMIN</option>
+              <option value="ROLE_SPECIALIST_ITSUPPORT">ROLE SPECIALIST ITSUPPORT</option>
+              <option value="ROLE_CAPABLE_ITSUPPORT">ROLE CAPABLE ITSUPPORT</option>
+              <option value="ROLE_AVAILABLE_ITSUPPORT">ROLE AVAILABLE ITSUPPORT</option>
+              <option value="ROLE_USER">ROLE USER</option>
+              </select>
+            </div>
+            <button type="submit" className="btn btn-default w-100">UPDATE</button>
+        <div className="card-footer text-center">
+          <button className="btn btn-default" onClick={() => navigate("/usermanagement")}>Back to User Management</button>
         </div>
-        <button type="submit">Update</button>
       </form>
     </div>
   );

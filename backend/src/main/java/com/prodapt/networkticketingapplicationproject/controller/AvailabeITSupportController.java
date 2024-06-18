@@ -2,6 +2,8 @@ package com.prodapt.networkticketingapplicationproject.controller;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,8 +34,15 @@ public class AvailabeITSupportController {
 	@GetMapping("/routine")
 	public ResponseEntity<List<Ticket>> getRoutineTicket() throws TicketNotFoundException{
 		List<Ticket> t=ticketService.getRoutineTickets();
+		List<Ticket> plsm=ticketService.prilowsevmedium();
+		
+		
+		
+		List<Ticket> combinedList = Stream.concat(t.stream(), plsm.stream())
+                .collect(Collectors.toList());
+		
 		loggers.info("routine");
-		return new ResponseEntity<>(t,HttpStatus.OK);
+		return new ResponseEntity<>(combinedList,HttpStatus.OK);
 	}
 	
 	@GetMapping("/minor")

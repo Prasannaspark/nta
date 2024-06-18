@@ -26,6 +26,7 @@ public interface TicketRepository extends CrudRepository<Ticket, Integer>{
 	public List<Ticket> findAll();
 	
 	public List<Ticket> findByStatus(Status status);
+
 	
 
 }

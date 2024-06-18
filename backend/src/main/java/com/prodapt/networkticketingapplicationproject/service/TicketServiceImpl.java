@@ -2,8 +2,10 @@ package com.prodapt.networkticketingapplicationproject.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,9 +92,9 @@ public class TicketServiceImpl implements TicketService {
 	@Override
 	public List<Ticket> getRoutineTickets() throws TicketNotFoundException {
 		List<Ticket> mediumPriority = repo.findByPriority(Priority.MEDIUM);
-
 		List<Ticket> goldTicket = repo.findByCustomerTier(CustomerTier.GOLD);
-		List<Ticket> lowPriority = repo.findByPriority(Priority.LOW);
+		List<Ticket> lowPriority = repo.findBySeverity(Severity.LOW);
+
 		List<Ticket> intersection = new ArrayList<>();
 		for (Ticket ticket : goldTicket) {
 			if (lowPriority.contains(ticket)) {
@@ -115,6 +117,13 @@ public class TicketServiceImpl implements TicketService {
 			}
 		}
 		List<Ticket> twentyFourHoursPlus = getTwentyFourPlusAgedTickets();
+		if(twentyFourHoursPlus.isEmpty())
+		{
+			if(!intersectionOfUnionAndOpen.isEmpty()) 
+				return intersectionOfUnionAndOpen;
+			else
+				throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+		}
 		List<Ticket> notInTwentyFourHoursPlus = new ArrayList<>();
 		for (Ticket ticket : intersectionOfUnionAndOpen) {
 			if (!twentyFourHoursPlus.contains(ticket)) {
@@ -138,6 +147,13 @@ public class TicketServiceImpl implements TicketService {
 				.collect(Collectors.toList());
 
 		List<Ticket> twentyFourHoursPlus = getTwentyFourPlusAgedTickets();
+		if(twentyFourHoursPlus.isEmpty() )
+		{
+			if(!intersectionOfIntersectionAndOpen.isEmpty())
+				return intersectionOfIntersectionAndOpen;
+			else
+				throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+		}
 		List<Ticket> notInTwentyFourHoursPlus = new ArrayList<>();
 		for (Ticket ticket : intersectionOfIntersectionAndOpen) {
 			if (!twentyFourHoursPlus.contains(ticket)) {
@@ -174,12 +190,27 @@ public class TicketServiceImpl implements TicketService {
 		union.addAll(highPrioritySeverity);
 
 		List<Ticket> fourtyEightHoursPlus = getFourtyEightPlusAgedTickets();
+		if(fourtyEightHoursPlus.isEmpty())
+		{
+			List<Ticket> finalUnion= union;
+			List<Ticket> openTickets = repo.findByStatus(Status.OPEN);
+			List<Ticket> intersectionFinal = new ArrayList<>();
+			for (Ticket ticket : finalUnion) {
+				if (openTickets.contains(ticket)) {
+					intersectionFinal.add(ticket);
+				}
+			}
+
+			if (!intersectionFinal.isEmpty())
+				return intersectionFinal;
+			else
+				throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+		}
+		else {
 		List<Ticket> finalUnion = new ArrayList<>(union);
 		finalUnion.addAll(fourtyEightHoursPlus);
-
 		List<Ticket> openTickets = repo.findByStatus(Status.OPEN);
 		List<Ticket> intersectionFinal = new ArrayList<>();
-		
 		for (Ticket ticket : finalUnion) {
 			if (openTickets.contains(ticket)) {
 				intersectionFinal.add(ticket);
@@ -190,7 +221,7 @@ public class TicketServiceImpl implements TicketService {
 			return intersectionFinal;
 		else
 			throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
-
+		}
 	}
 
 	@Override
@@ -226,6 +257,13 @@ public class TicketServiceImpl implements TicketService {
 			}
 		}
 		List<Ticket> twentyFourHoursPlus = getTwentyFourPlusAgedTickets();
+		if(twentyFourHoursPlus.isEmpty())
+		{
+			if(!intersection.isEmpty())
+				return intersection;
+			else
+				throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+		}
 		List<Ticket> notInTwentyFourHoursPlus = new ArrayList<>();
 		for (Ticket ticket : intersection) {
 			if (!twentyFourHoursPlus.contains(ticket)) {
@@ -238,10 +276,134 @@ public class TicketServiceImpl implements TicketService {
 			throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
 	}
 
+	
+	@Override
+	public List<Ticket> prilowsevmedium() throws TicketNotFoundException {
+		List<Ticket> lowPriority = repo.findByPriority(Priority.LOW);
+		List<Ticket> medSeverity = repo.findBySeverity(Severity.MEDIUM);
+		List<Ticket> openTickets = repo.findByStatus(Status.OPEN);
+
+		List<Ticket> lowPrioritymedSeverity = new ArrayList<>();
+		for (Ticket ticket : lowPriority) {
+			if (medSeverity.contains(ticket)) {
+				lowPrioritymedSeverity.add(ticket);
+			}
+		}
+
+		List<Ticket> twentyFourHoursPlusTickets = getTwentyFourPlusAgedTickets();
+
+		List<Ticket> union = new ArrayList<>(lowPrioritymedSeverity);
+		union.addAll(twentyFourHoursPlusTickets);
+
+		
+
+		List<Ticket> intersection = new ArrayList<>();
+		for (Ticket ticket : union) {
+			if (openTickets.contains(ticket)) {
+				intersection.add(ticket);
+			}
+		}
+
+		List<Ticket> notFourtyEightHoursPlusTickets = getFourtyEightPlusAgedTickets();
+		if(notFourtyEightHoursPlusTickets.isEmpty())
+		{
+			if(!intersection.isEmpty())
+				return intersection;
+			else
+				throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+		}
+		List<Ticket> result = new ArrayList<>();
+		for (Ticket ticket : intersection) {
+			if (!notFourtyEightHoursPlusTickets.contains(ticket)) {
+				result.add(ticket);
+			}
+		}
+		if (!result.isEmpty())
+			return result;
+		else
+			throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+
+	}
+	
+	
+	@Override
+	public List<Ticket> highprilowsev()throws TicketNotFoundException{
+		
+		
+		List<Ticket> highPriority = repo.findByPriority(Priority.HIGH);
+		List<Ticket> lowSeverity = repo.findBySeverity(Severity.LOW);
+		List<Ticket> openTickets = repo.findByStatus(Status.OPEN);
+		
+		
+		
+		List<Ticket> highPrioritylowSeverity = new ArrayList<>();
+		for (Ticket ticket : highPriority) {
+			if (lowSeverity.contains(ticket)) {
+				highPrioritylowSeverity.add(ticket);
+			}
+		}
+		
+		
+		List<Ticket> twentyFourHoursPlusTickets = getTwentyFourPlusAgedTickets();
+
+		List<Ticket> union = new ArrayList<>(highPrioritylowSeverity);
+		union.addAll(twentyFourHoursPlusTickets);
+
+		
+
+		List<Ticket> intersection = new ArrayList<>();
+		for (Ticket ticket : union) {
+			if (openTickets.contains(ticket)) {
+				intersection.add(ticket);
+			}
+		}
+
+		List<Ticket> notFourtyEightHoursPlusTickets = getFourtyEightPlusAgedTickets();
+		List<Ticket> result = new ArrayList<>();
+		for (Ticket ticket : intersection) {
+			if (!notFourtyEightHoursPlusTickets.contains(ticket)) {
+				result.add(ticket);
+			}
+		}
+		if (!result.isEmpty())
+			return result;
+		else
+			throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+
+	}
+	
+	@Override
+	public List<Ticket> highprilowsevgold()throws TicketNotFoundException{
+		
+		  List<Ticket> highPriority = repo.findByPriority(Priority.HIGH);
+	        List<Ticket> lowSeverity = repo.findBySeverity(Severity.LOW);
+	        List<Ticket> openTickets = repo.findByStatus(Status.OPEN);
+	        List<Ticket> goldTickets = repo.findByCustomerTier(CustomerTier.GOLD);
+
+	        // Creating sets from the lists for intersection operation
+	        Set<Ticket> highPrioritySet = new HashSet<>(highPriority);
+	        Set<Ticket> lowSeveritySet = new HashSet<>(lowSeverity);
+	        Set<Ticket> openTicketsSet = new HashSet<>(openTickets);
+	        Set<Ticket> goldTicketsSet = new HashSet<>(goldTickets);
+
+	        // Finding intersection of all sets
+	        Set<Ticket> intersection = new HashSet<>(highPrioritySet);
+	        intersection.retainAll(lowSeveritySet);
+	        intersection.retainAll(openTicketsSet);
+	        intersection.retainAll(goldTicketsSet);
+
+	        // Converting intersection set back to list (if needed)
+	        List<Ticket> intersectedList = new ArrayList<>(intersection);
+		
+		return  intersectedList;
+	}
+	
+
 	@Override
 	public List<Ticket> getNotUrgentButCriticalTickets() throws TicketNotFoundException {
 		List<Ticket> lowPriority = repo.findByPriority(Priority.LOW);
 		List<Ticket> highSeverity = repo.findBySeverity(Severity.HIGH);
+		//List<Ticket> goldTicket = repo.findByCustomerTier(CustomerTier.GOLD);
 
 		List<Ticket> lowPriorityhighSeverity = new ArrayList<>();
 		for (Ticket ticket : lowPriority) {
@@ -249,6 +411,7 @@ public class TicketServiceImpl implements TicketService {
 				lowPriorityhighSeverity.add(ticket);
 			}
 		}
+
 		List<Ticket> twentyFourHoursPlusTickets = getTwentyFourPlusAgedTickets();
 
 		List<Ticket> union = new ArrayList<>(lowPriorityhighSeverity);
@@ -262,14 +425,23 @@ public class TicketServiceImpl implements TicketService {
 				intersection.add(ticket);
 			}
 		}
-		
+
 		List<Ticket> notFourtyEightHoursPlusTickets = getFourtyEightPlusAgedTickets();
+		if(notFourtyEightHoursPlusTickets.isEmpty())
+		{
+			if(!intersection.isEmpty())
+				return intersection;
+			else
+				throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
+
+			
+		}
 		List<Ticket> result = new ArrayList<>();
-        for (Ticket ticket : intersection) {
-            if (!notFourtyEightHoursPlusTickets.contains(ticket)) {
-                result.add(ticket);
-            }
-        }
+		for (Ticket ticket : intersection) {
+			if (!notFourtyEightHoursPlusTickets.contains(ticket)) {
+				result.add(ticket);
+			}
+		}
 		if (!result.isEmpty())
 			return result;
 		else
@@ -282,7 +454,6 @@ public class TicketServiceImpl implements TicketService {
 		LocalDate currentDate = LocalDate.now();
 		LocalDate fortyEightHoursAgo = currentDate.minusDays(2);
 
-		// Assuming there's a method to retrieve all tickets
 		List<Ticket> allTickets = repo.findAll();
 
 		// Filter tickets older than forty-eight hours
@@ -321,5 +492,7 @@ public class TicketServiceImpl implements TicketService {
 		else
 			throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
 	}
-
+	
+	
+	
 }

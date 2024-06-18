@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import CustomerService from '../services/CustomerService';
- 
+import './CustomerTicketManagement.css';
 function UpdateCustomerTicket() {
   const navigate = useNavigate();
   const { ticketId } = useParams();
- 
+
   const [ticketData, setTicketData] = useState({
     title: '',
     description: '',
@@ -14,14 +14,13 @@ function UpdateCustomerTicket() {
     customerTier: '',
     issueType: ''
   });
- 
+
   useEffect(() => {
     fetchTicketDataById(ticketId);
   }, [ticketId]);
- 
+
   const fetchTicketDataById = async (ticketId) => {
     try {
-       
       const response = await CustomerService.getTicket(ticketId);
       if (response) {
         setTicketData(response);
@@ -32,7 +31,7 @@ function UpdateCustomerTicket() {
       console.error('Error fetching ticket data:', error);
     }
   };
- 
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setTicketData((prevTicketData) => ({
@@ -40,7 +39,7 @@ function UpdateCustomerTicket() {
       [name]: value
     }));
   };
- 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -51,42 +50,63 @@ function UpdateCustomerTicket() {
       alert(error.message || 'An error occurred while updating ticket.');
     }
   };
- 
+
   return (
-    <div className="auth-container">
-      <h2>Update Ticket</h2>
+    <div className="auth-container mt-5">
+      <h2>UPDATE TICKET</h2>
       <form onSubmit={handleSubmit}>
-
         <div className="mb-3">
-            <label htmlFor="title" className="form-label">Title : </label>
-            <input type="text" className="form-control" id="title" name="title" value={ticketData.title || ''} onChange={handleInputChange} required />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="description" className="form-label">Description : </label>
-            <input type="text" className="form-control" id="description" name="description" value={ticketData.description || ''} onChange={handleInputChange} required />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="priority" className="form-label">Priority :</label>
-            <input type="text" className="form-control" id="priority" name="priority" value={ticketData.priority || ''} onChange={handleInputChange} required />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="severity" className="form-label">Severity :</label>
-            <input type="text" className="form-control" id="severity" name="severity" value={ticketData.severity || ''} onChange={handleInputChange} required />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="customerTier" className="form-label">Customer Tier :</label>
-            <input type="text" className="form-control" id="customerTier" name="customerTier" value={ticketData.customerTier || ''} onChange={handleInputChange} required />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="issueType" className="form-label">Issue Type :</label>
-            <input type="text" className="form-control" id="issueType" name="issueType" value={ticketData.issueType || ''} onChange={handleInputChange} required />
-          </div>
-        <button type="submit">Update</button>
-
-
+          <label htmlFor="title" className="form-label">Title :</label>
+          <input type="text" className="form-control" id="title" name="title" value={ticketData.title || ''} onChange={handleInputChange} required />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="description" className="form-label">Description :</label>
+          <input type="text" className="form-control" id="description" name="description" value={ticketData.description || ''} onChange={handleInputChange} required />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="priority" className="form-label">Priority :</label>
+          <select className="form-select" id="priority" name="priority" value={ticketData.priority || ''} onChange={handleInputChange} required>
+            <option value="">Select Priority</option>
+            <option value="LOW">Low</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="HIGH">High</option>
+          </select>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="severity" className="form-label">Severity :</label>
+          <select className="form-select" id="severity" name="severity" value={ticketData.severity || ''} onChange={handleInputChange} required>
+            <option value="">Select Severity</option>
+            <option value="LOW">Low</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="HIGH">High</option>
+          </select>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="customerTier" className="form-label">Customer Tier :</label>
+          <select className="form-select" id="customerTier" name="customerTier" value={ticketData.customerTier || ''} onChange={handleInputChange} required>
+            <option value="">Select Customer Tier</option>
+            <option value="BRONZE">Bronze</option>
+            <option value="SILVER">Silver</option>
+            <option value="GOLD">Gold</option>
+          </select>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="issueType" className="form-label">Issue Type :</label>
+          <select className="form-select" id="issueType" name="issueType" value={ticketData.issueType || ''} onChange={handleInputChange} required>
+            <option value="">Select Issue Type</option>
+            <option value="CONNECTIVITY">Connectivity</option>
+            <option value="SOFTWARE">Software</option>
+            <option value="HARDWARE">Hardware</option>
+            <option value="PERFORMANCE">Performance</option>
+          </select>
+        </div>
+        <button type="submit" className="btn btn-default">UPDATE</button>
+        <div className="card-footer text-center">
+          <button className="btn btn-default" onClick={() => navigate("/customerticketmanagement")}>Back to customer ticket management</button>
+        </div>
       </form>
     </div>
   );
 }
- 
+
 export default UpdateCustomerTicket;

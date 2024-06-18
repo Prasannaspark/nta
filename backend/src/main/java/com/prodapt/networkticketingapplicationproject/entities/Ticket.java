@@ -25,6 +25,7 @@ import lombok.ToString;
 @Table(name = "tickets_table")
 
 public class Ticket {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer ticketId;

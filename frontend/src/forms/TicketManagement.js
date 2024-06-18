@@ -1,16 +1,15 @@
 import AdminService from '../services/AdminService';
-import { useState } from 'react';
-import {  useEffect } from 'react';
- 
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
- 
+import './TicketManagement.css';
+
 const TicketManagement = () => {
   const [tickets, setTickets] = useState([]);
- 
+
   useEffect(() => {
     fetchTickets();
   }, []);
- 
+
   const fetchTickets = () => {
     AdminService.viewTickets()
       .then(response => {
@@ -18,16 +17,13 @@ const TicketManagement = () => {
         console.log(response);
       })
       .catch(error => {
-        console.error('Error fetching ticketss : ', error);
+        console.error('Error fetching tickets: ', error);
       });
   };
 
-
- 
   return (
-    <div className="container">
- 
-      <table className="table mt-4">
+    <div className="container mt-5 pt-5">
+      <table className="table table-striped table-bordered">
         <thead>
           <tr>
             <th>Ticket ID</th>
@@ -39,7 +35,7 @@ const TicketManagement = () => {
             <th>Creation Date</th>
             <th>Last Updated</th>
             <th>Customer Tier</th>
-            <th>Issue Type </th>
+            <th>Issue Type</th>
             <th>User Id</th>
           </tr>
         </thead>
@@ -64,5 +60,5 @@ const TicketManagement = () => {
     </div>
   );
 };
- 
+
 export default TicketManagement;

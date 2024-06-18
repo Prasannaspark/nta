@@ -19,7 +19,6 @@ const viewMinorTicket = async () => {
     }
     
   };
-
   const viewRoutineTicket = async () => {
     try {
       const response = await axios.get(`${BASE_URL}/routine`, {
@@ -36,7 +35,6 @@ const viewMinorTicket = async () => {
     }
     
   };
-
   const getTicket = async (ticketId) => {
     try {
       const response = await axios.post(`${BASE_URL}/getticket`, ticketId, {
@@ -51,7 +49,6 @@ const viewMinorTicket = async () => {
       throw err;
     }
   };
-
   const updateTicket = async (ticketData) => {
     try {
       const response = await axios.post(`${BASE_URL}/updateticket`, ticketData, {
@@ -66,7 +63,6 @@ const viewMinorTicket = async () => {
       throw err;
     }
   };
-
 const AvailableITService = {
     
     viewMinorTicket,

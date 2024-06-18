@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -18,7 +19,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.prodapt.networkticketingapplicationproject.entities.ERole;
 import com.prodapt.networkticketingapplicationproject.entities.Role;
@@ -43,6 +46,7 @@ class UserEntityServiceImplTest {
         userEntity.setId(1);
         userEntity.setUsername("testuser");
         userEntity.setEmail("test@example.com");
+        userEntity.setPassword("password");
         role = new Role();
         role.setId(1);
         role.setName(ERole.ROLE_USER);
@@ -51,16 +55,31 @@ class UserEntityServiceImplTest {
 
     @Test
     void updaterole_UserFound_RoleUpdatedSuccessfully() {
-        when(userRepository.findById(1)).thenReturn(Optional.of(userEntity));
-        Role newRole = new Role();
-        newRole.setId(2);
-        newRole.setName(ERole.ROLE_ADMIN);
-        
-        String result = userEntityService.updaterole(1, newRole);
+//        when(userRepository.findById(1)).thenReturn(Optional.of(userEntity));
+//        Role newRole = new Role();
+//        newRole.setId(2);
+//        newRole.setName(ERole.ROLE_ADMIN);
+//        
+//        String result = userEntityService.updaterole(1, newRole);
+//
+//        assertEquals("Role Updated Successfully!!!", result);
+//        assertEquals(newRole, userEntity.getRole());
+//        verify(userRepository).save(userEntity);
+    	
+    	  when(userRepository.findById(1)).thenReturn(Optional.of(userEntity));
 
-        assertEquals("Role Updated Successfully!!!", result);
-        assertEquals(newRole, userEntity.getRole());
-        verify(userRepository).save(userEntity);
+          // New role to update
+          Role newRole = new Role();
+          newRole.setId(2);
+          newRole.setName(ERole.ROLE_ADMIN);
+
+          // Call the method under test
+          String result = userEntityService.updaterole(1, newRole);
+
+          // Assertions
+          assertEquals("Role Updated Successfully!!!", result);
+          assertEquals(newRole, userEntity.getRole());
+          verify(userRepository).save(userEntity);
     }
 
     @Test
@@ -150,4 +169,9 @@ class UserEntityServiceImplTest {
         assertEquals(users.size(), result.size());
         assertEquals(users.get(0), result.get(0));
     }
+    
+    
+   
+
+    
 }

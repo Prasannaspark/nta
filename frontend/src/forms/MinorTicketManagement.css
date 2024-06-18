@@ -1,0 +1,8 @@
+.table tbody tr td button a {
+    text-decoration: none;
+    color: #4078a5;
+}
+ 
+.table tbody tr td button a:hover {
+    color: white;
+}

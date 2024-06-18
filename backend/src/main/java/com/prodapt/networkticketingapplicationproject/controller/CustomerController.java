@@ -81,5 +81,6 @@ public class CustomerController {
 		List<Ticket> t= ticketService.getByUserEntity(user);
 		loggers.info("getmytickets");
 		return new ResponseEntity<List<Ticket>>(t,HttpStatus.OK);
+	
 	}
 }

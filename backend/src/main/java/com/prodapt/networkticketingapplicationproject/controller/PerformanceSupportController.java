@@ -115,9 +115,13 @@ public class PerformanceSupportController {
 		List<Ticket> intersection = performanceissue.stream()
 		        .filter(tickets::contains) // Filter tickets in performanceissue that are also in tickets
 		        .collect(Collectors.toList());
-		if(!intersection.isEmpty())
+		List<Ticket> openTicket= ticketservice.getOpenTickets();
+		List<Ticket> intersectionWithOpen = intersection.stream()
+		        .filter(openTicket::contains) // Filter tickets in intersection that are also in openTicket
+		        .collect(Collectors.toList());
+		if(!intersectionWithOpen.isEmpty())
 		{
-		return new ResponseEntity<>(intersection, HttpStatus.OK);
+		return new ResponseEntity<>(intersectionWithOpen, HttpStatus.OK);
 		}
 		else throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
 		}

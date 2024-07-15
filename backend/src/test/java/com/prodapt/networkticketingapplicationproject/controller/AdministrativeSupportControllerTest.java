@@ -1,8 +1,12 @@
 package com.prodapt.networkticketingapplicationproject.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
@@ -165,18 +169,36 @@ public class AdministrativeSupportControllerTest {
     }
 
     @Test
-    void testGetCriticalTicketSuccess() throws TicketNotFoundException {
-        List<Ticket> agedTickets = Arrays.asList(new Ticket(), new Ticket());
-        List<Ticket> adminTickets = Arrays.asList(agedTickets.get(0));
-
+    void testGetCriticalTicket_Success() throws TicketNotFoundException {
+        // Create test data
+        Ticket ticket1 = new Ticket();
+        Ticket ticket2 = new Ticket();
+        Ticket ticket3 = new Ticket();
+ 
+        List<Ticket> administrativeissue = Arrays.asList(ticket1, ticket2, ticket3);
+        List<Ticket> agedTickets = Arrays.asList(ticket1, ticket2);
+        List<Ticket> openTickets = Arrays.asList(ticket1, ticket2);
+ 
+        // Mock the service method calls
+        when(ticketService.administrativeIssue()).thenReturn(administrativeissue);
         when(ticketService.getFourtyEightPlusAgedTickets()).thenReturn(agedTickets);
-        when(ticketService.administrativeIssue()).thenReturn(adminTickets);
-
+        when(ticketService.getOpenTickets()).thenReturn(openTickets);
+ 
+        // Call the controller method
         ResponseEntity<List<Ticket>> response = administrativeSupportController.getCriticalTicket();
-
+ 
+        // Verify the result
+        assertNotNull(response);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(1, response.getBody().size());
-        assertEquals(agedTickets.get(0), response.getBody().get(0));
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        assertTrue(response.getBody().contains(ticket1));
+        assertTrue(response.getBody().contains(ticket2));
+ 
+        // Verify service method calls
+        verify(ticketService, times(1)).administrativeIssue();
+        verify(ticketService, times(1)).getFourtyEightPlusAgedTickets();
+        verify(ticketService, times(1)).getOpenTickets();
     }
 
     @Test

@@ -192,49 +192,6 @@ public class TicketServiceImpl implements TicketService {
 		}
 	}
 
-	@Override
-	public List<Ticket> goldTicketHandler() throws TicketNotFoundException {
-
-		List<Ticket> goldticket = repo.findByCustomerTier(CustomerTier.GOLD);
-		List<Ticket> opentickets = repo.findByStatus(Status.OPEN);
-
-		Set<Ticket> goldticketSet = goldticket.stream().collect(Collectors.toSet());
-		Set<Ticket> openticketsSet = opentickets.stream().collect(Collectors.toSet());
-
-		goldticketSet.retainAll(openticketsSet);
-		
-		
-		// Convert set back to list if necessary
-		List<Ticket> intersectionGoldandOpen = goldticketSet.stream().collect(Collectors.toList());
-
-		if (!intersectionGoldandOpen.isEmpty()) {
-				return intersectionGoldandOpen;
-				} else {
-					throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
-				}
-	   
-	}
-
-	@Override
-	public List<Ticket> silverTicketHandler() throws TicketNotFoundException {
-		List<Ticket> silverticket = repo.findByCustomerTier(CustomerTier.SILVER);
-		List<Ticket> opentickets = repo.findByStatus(Status.OPEN);
-
-		Set<Ticket>  silverticketSet =  silverticket .stream().collect(Collectors.toSet());
-		Set<Ticket> openticketsSet = opentickets.stream().collect(Collectors.toSet());
-
-		 silverticketSet.retainAll(openticketsSet);
-		
-		
-		
-		List<Ticket> intersectionSilverandOpen = silverticketSet.stream().collect(Collectors.toList());
-
-		if (!intersectionSilverandOpen.isEmpty()) {
-				return intersectionSilverandOpen;
-				} else {
-					throw new TicketNotFoundException(QueryMapper.TICKETNOTFOUND);
-				}
-	}
 
 	
 	@Override

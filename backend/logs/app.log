@@ -1,0 +1,668 @@
+2024-07-15T10:33:30.389+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:33:30.400+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:33:30.501+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-15T10:33:30.502+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-15T10:33:32.122+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:33:32.335+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 195 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:33:33.312+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:33:33.331+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:33:33.331+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:33:33.427+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:33:33.427+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2924 ms
+2024-07-15T10:33:33.572+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:33:33.654+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-15T10:33:33.704+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:33:34.097+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:33:34.136+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-15T10:33:34.504+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13efd367
+2024-07-15T10:33:34.509+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-15T10:33:34.588+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:33:36.106+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:33:36.250+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:33:36.693+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-15T10:33:36.765+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:33:36.766+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:33:36.928+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:33:37.402+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4456e776, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72f1304d, org.springframework.security.web.context.SecurityContextHolderFilter@117764a5, org.springframework.security.web.header.HeaderWriterFilter@3818b10c, org.springframework.web.filter.CorsFilter@2d592b31, org.springframework.security.web.authentication.logout.LogoutFilter@148e0531, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@5bace96, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b44d8c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c08ad9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@446058d5, org.springframework.security.web.session.SessionManagementFilter@de8fe7b, org.springframework.security.web.access.ExceptionTranslationFilter@3c6b7a4c, org.springframework.security.web.access.intercept.AuthorizationFilter@326b6ff]
+2024-07-15T10:33:37.911+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:33:37.976+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:33:37.989+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 8.423 seconds (process running for 9.741)
+2024-07-15T10:35:21.458+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-15T10:35:21.458+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-15T10:35:21.458+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-07-15T10:35:21.836+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:35:21.836+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:35:22.658+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AuthController          : User Registered Exist
+2024-07-15T10:35:22.690+05:30  WARN 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2024-07-15T10:35:22.690+05:30 ERROR 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'roshika' for key 'user_table.UKen3wad7p8qfu8pcmh62gvef6v'
+2024-07-15T10:35:22.723+05:30 ERROR 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry 'roshika' for key 'user_table.UKen3wad7p8qfu8pcmh62gvef6v'] [insert into user_table (email,password,role_id,tier,username) values (?,?,?,?,?)]; SQL [insert into user_table (email,password,role_id,tier,username) values (?,?,?,?,?)]; constraint [user_table.UKen3wad7p8qfu8pcmh62gvef6v]] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'roshika' for key 'user_table.UKen3wad7p8qfu8pcmh62gvef6v'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:391) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:305) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.1.8.jar:6.1.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy128.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319) ~[spring-orm-6.1.8.jar:6.1.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy128.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:628) ~[spring-data-jpa-3.3.0.jar:3.3.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.3.0.jar:3.3.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.1.8.jar:6.1.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy131.save(Unknown Source) ~[na:na]
+	at com.prodapt.networkticketingapplicationproject.service.UserEntityServiceImpl.addUserEntity(UserEntityServiceImpl.java:81) ~[classes/:na]
+	at com.prodapt.networkticketingapplicationproject.controller.AuthController.registerUser(AuthController.java:103) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:51) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-07-15T10:35:24.612+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:35:24.621+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AuthController          : User Name Already Exist
+2024-07-15T10:35:36.582+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:35:36.595+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.AuthController          : User Email Already Exist
+2024-07-15T10:35:41.473+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:35:41.751+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.AuthController          : User Registered Exist
+2024-07-15T10:35:53.246+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:36:17.609+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-1] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:36:19.678+05:30  WARN 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException: Ticket Not Found]
+2024-07-15T10:36:27.724+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : addticket
+2024-07-15T10:36:28.660+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getmytickets
+2024-07-15T10:36:28.660+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getmytickets
+2024-07-15T10:36:37.075+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:37:05.494+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-3] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:37:07.195+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.CustomerController      : getmytickets
+2024-07-15T10:37:14.547+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-5] c.p.n.controller.CustomerController      : addticket
+2024-07-15T10:37:15.385+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-6] c.p.n.controller.CustomerController      : getmytickets
+2024-07-15T10:37:15.385+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-7] c.p.n.controller.CustomerController      : getmytickets
+2024-07-15T10:37:28.629+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AuthController          : User Signin
+2024-07-15T10:37:31.101+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-10] c.p.n.controller.AdminController         : getall
+2024-07-15T10:37:41.523+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-2] c.p.n.controller.AdminController         : getall
+2024-07-15T10:37:48.473+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-4] c.p.n.controller.AdminController         : getticket
+2024-07-15T10:37:55.697+05:30  INFO 17888 --- [networkticketingapplicationproject] [http-nio-9090-exec-8] c.p.n.controller.AdminController         : getall
+2024-07-15T10:40:03.437+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-07-15T10:40:03.468+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:40:03.473+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-15T10:40:03.485+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-15T10:40:03.610+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:40:03.611+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:40:03.919+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:40:03.954+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:40:04.076+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:40:04.078+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:40:04.078+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:40:04.114+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:40:04.114+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 501 ms
+2024-07-15T10:40:04.149+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:40:04.152+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:40:04.163+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:40:04.164+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-07-15T10:40:04.181+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cfce9d8
+2024-07-15T10:40:04.182+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-07-15T10:40:04.184+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:40:04.269+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:40:04.317+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:40:04.424+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:40:04.425+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:40:04.468+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:40:04.560+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5bbc4462, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1939b6aa, org.springframework.security.web.context.SecurityContextHolderFilter@4b0794e6, org.springframework.security.web.header.HeaderWriterFilter@6b06fc07, org.springframework.web.filter.CorsFilter@7787d59, org.springframework.security.web.authentication.logout.LogoutFilter@5b733681, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@387d2e25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d1295b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21a8b8d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f800afe, org.springframework.security.web.session.SessionManagementFilter@2fd44aa8, org.springframework.security.web.access.ExceptionTranslationFilter@487fdb8c, org.springframework.security.web.access.intercept.AuthorizationFilter@562fdfef]
+2024-07-15T10:40:04.647+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:40:04.664+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:40:04.668+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 1.123 seconds (process running for 396.419)
+2024-07-15T10:40:04.670+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-15T10:46:43.062+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 57 class path changes (0 additions, 0 deletions, 57 modifications)
+2024-07-15T10:46:43.091+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:46:43.092+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-07-15T10:46:43.099+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-07-15T10:46:43.197+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:46:43.198+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:46:43.439+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:46:43.463+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:46:43.575+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:46:43.576+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:46:43.576+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:46:43.614+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:46:43.614+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 414 ms
+2024-07-15T10:46:43.646+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:46:43.650+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:46:43.660+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:46:43.662+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-07-15T10:46:43.681+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c1f2252
+2024-07-15T10:46:43.682+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-07-15T10:46:43.683+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:46:43.775+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:46:43.831+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:46:43.936+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:46:43.936+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:46:43.964+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:46:44.042+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@579c4890, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6021c76, org.springframework.security.web.context.SecurityContextHolderFilter@68e95b3d, org.springframework.security.web.header.HeaderWriterFilter@512b5dce, org.springframework.web.filter.CorsFilter@2b62aaee, org.springframework.security.web.authentication.logout.LogoutFilter@4c43b184, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@136673f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62e40621, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69aae29e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3dd37e91, org.springframework.security.web.session.SessionManagementFilter@575a04d7, org.springframework.security.web.access.ExceptionTranslationFilter@653de756, org.springframework.security.web.access.intercept.AuthorizationFilter@30d4ce75]
+2024-07-15T10:46:44.145+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:46:44.163+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:46:44.171+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 1.018 seconds (process running for 795.923)
+2024-07-15T10:46:44.174+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-15T10:52:40.279+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 57 class path changes (0 additions, 0 deletions, 57 modifications)
+2024-07-15T10:52:40.296+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:52:40.297+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-15T10:52:40.302+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-07-15T10:52:40.414+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:52:40.415+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:52:40.633+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:52:40.669+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:52:40.754+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:52:40.755+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:52:40.755+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:52:40.784+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:52:40.784+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 368 ms
+2024-07-15T10:52:40.813+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:52:40.815+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:52:40.822+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:52:40.822+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-07-15T10:52:40.835+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7675e0a4
+2024-07-15T10:52:40.835+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-07-15T10:52:40.836+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:52:40.913+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:52:40.975+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:52:41.059+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:52:41.060+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:52:41.081+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:52:41.135+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10a9e639, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34c6b049, org.springframework.security.web.context.SecurityContextHolderFilter@6d1fc922, org.springframework.security.web.header.HeaderWriterFilter@6ebca4ee, org.springframework.web.filter.CorsFilter@49771584, org.springframework.security.web.authentication.logout.LogoutFilter@234dfea, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@321d14b9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60a9b25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d1ac4de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5755bd61, org.springframework.security.web.session.SessionManagementFilter@bf2f0a2, org.springframework.security.web.access.ExceptionTranslationFilter@7fb29995, org.springframework.security.web.access.intercept.AuthorizationFilter@bd2add6]
+2024-07-15T10:52:41.180+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:52:41.197+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:52:41.201+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 0.845 seconds (process running for 1156.031)
+2024-07-15T10:52:41.202+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-15T10:52:59.870+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 49 class path changes (0 additions, 49 deletions, 0 modifications)
+2024-07-15T10:52:59.892+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:52:59.893+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-07-15T10:52:59.901+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-07-15T10:52:59.994+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:52:59.995+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:53:00.162+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:53:00.166+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-07-15T10:53:00.253+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:53:00.254+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:53:00.254+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:53:00.286+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:53:00.286+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 290 ms
+2024-07-15T10:53:00.320+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:53:00.322+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:53:00.329+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:53:00.330+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-07-15T10:53:00.340+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ad051b6
+2024-07-15T10:53:00.340+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-07-15T10:53:00.341+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:53:00.358+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:53:00.358+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:53:00.386+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:53:00.513+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-15T10:53:00.540+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@572cbd6d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c90c696, org.springframework.security.web.context.SecurityContextHolderFilter@2b6a1270, org.springframework.security.web.header.HeaderWriterFilter@6f12c3aa, org.springframework.web.filter.CorsFilter@1f919395, org.springframework.security.web.csrf.CsrfFilter@2001aa5b, org.springframework.security.web.authentication.logout.LogoutFilter@2c0a454e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4484b59e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b3aa049, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@65230d89, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@72210d3b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6143634, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@324c2a39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57560395, org.springframework.security.web.access.ExceptionTranslationFilter@5cad083f, org.springframework.security.web.access.intercept.AuthorizationFilter@889e7e7]
+2024-07-15T10:53:00.551+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:53:00.563+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:53:00.568+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 0.611 seconds (process running for 1175.623)
+2024-07-15T10:53:00.572+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - AnyNestedCondition 3 matched 0 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-07-15T10:53:03.001+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 53 class path changes (49 additions, 0 deletions, 4 modifications)
+2024-07-15T10:53:03.021+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:53:03.022+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-07-15T10:53:03.029+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-07-15T10:53:03.139+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:53:03.139+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:53:03.367+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:53:03.399+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:53:03.486+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:53:03.487+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:53:03.487+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:53:03.520+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:53:03.520+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 379 ms
+2024-07-15T10:53:03.555+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:53:03.557+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:53:03.564+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:53:03.565+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-07-15T10:53:03.576+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b967982
+2024-07-15T10:53:03.576+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-07-15T10:53:03.577+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:53:03.637+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:53:03.680+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:53:03.762+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:53:03.763+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:53:03.795+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:53:03.866+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f2b8558, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@360967dd, org.springframework.security.web.context.SecurityContextHolderFilter@6d68ba86, org.springframework.security.web.header.HeaderWriterFilter@6388ead9, org.springframework.web.filter.CorsFilter@4a379327, org.springframework.security.web.authentication.logout.LogoutFilter@4c5abc3c, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@675a3973, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74cee23e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50b4105c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70737b29, org.springframework.security.web.session.SessionManagementFilter@6e9b4aa1, org.springframework.security.web.access.ExceptionTranslationFilter@592812ff, org.springframework.security.web.access.intercept.AuthorizationFilter@3fc0b7c7]
+2024-07-15T10:53:03.959+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:53:03.980+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:53:03.988+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 0.902 seconds (process running for 1179.083)
+2024-07-15T10:53:03.992+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsServiceImpl and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 3 matched 0 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-07-15T10:53:13.741+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : Starting NetworkticketingapplicationprojectApplicationTests using Java 17.0.10 with PID 27164 (started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:53:13.744+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:53:15.497+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:53:15.614+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:53:16.500+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:53:16.641+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-15T10:53:16.715+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:53:17.008+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:53:17.059+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-15T10:53:17.691+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@374334c1
+2024-07-15T10:53:17.696+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-15T10:53:17.799+05:30  WARN 27164 --- [networkticketingapplicationproject] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:53:19.279+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:53:19.438+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:53:19.921+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-15T10:53:20.063+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:53:20.065+05:30  WARN 27164 --- [networkticketingapplicationproject] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:53:20.263+05:30  WARN 27164 --- [networkticketingapplicationproject] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:53:20.737+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66871f61, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7722f86d, org.springframework.security.web.context.SecurityContextHolderFilter@4604aa42, org.springframework.security.web.header.HeaderWriterFilter@560465ea, org.springframework.web.filter.CorsFilter@1a38040, org.springframework.security.web.authentication.logout.LogoutFilter@36845587, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@54b40966, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a25f849, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b80cd8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57020923, org.springframework.security.web.session.SessionManagementFilter@6561e48, org.springframework.security.web.access.ExceptionTranslationFilter@7f73d565, org.springframework.security.web.access.intercept.AuthorizationFilter@53884783]
+2024-07-15T10:53:21.266+05:30  INFO 27164 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : Started NetworkticketingapplicationprojectApplicationTests in 8.358 seconds (process running for 14.632)
+2024-07-15T10:53:21.672+05:30  INFO 27164 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:53:21.675+05:30  INFO 27164 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-15T10:53:21.687+05:30  INFO 27164 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-15T10:54:44.413+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : Starting NetworkticketingapplicationprojectApplicationTests using Java 17.0.10 with PID 22064 (started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:54:44.417+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:54:46.014+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:54:46.160+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:54:47.064+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:54:47.202+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-15T10:54:47.279+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:54:47.545+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:54:47.619+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-15T10:54:48.172+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@887b603
+2024-07-15T10:54:48.176+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-15T10:54:48.285+05:30  WARN 22064 --- [networkticketingapplicationproject] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:54:49.738+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:54:49.895+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:54:50.363+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-15T10:54:50.494+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:54:50.496+05:30  WARN 22064 --- [networkticketingapplicationproject] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:54:50.677+05:30  WARN 22064 --- [networkticketingapplicationproject] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:54:51.158+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58fd4e05, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45d90866, org.springframework.security.web.context.SecurityContextHolderFilter@42f183d1, org.springframework.security.web.header.HeaderWriterFilter@5c508c56, org.springframework.web.filter.CorsFilter@7d71285c, org.springframework.security.web.authentication.logout.LogoutFilter@4a776dca, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@6ff0f19e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6736791a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75bf619c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@365d636f, org.springframework.security.web.session.SessionManagementFilter@1c6ebece, org.springframework.security.web.access.ExceptionTranslationFilter@2859a39, org.springframework.security.web.access.intercept.AuthorizationFilter@33117039]
+2024-07-15T10:54:51.710+05:30  INFO 22064 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : Started NetworkticketingapplicationprojectApplicationTests in 8.066 seconds (process running for 13.683)
+2024-07-15T10:54:52.097+05:30  INFO 22064 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:54:52.100+05:30  INFO 22064 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-15T10:54:52.112+05:30  INFO 22064 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-15T10:55:49.404+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-07-15T10:55:49.426+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:55:49.427+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-07-15T10:55:49.434+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-07-15T10:55:49.544+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:55:49.544+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:55:49.802+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:55:49.831+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:55:49.950+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:55:49.951+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:55:49.951+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:55:49.992+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:55:49.992+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 446 ms
+2024-07-15T10:55:50.024+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:55:50.026+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:55:50.034+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:55:50.034+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-07-15T10:55:50.049+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34fb617d
+2024-07-15T10:55:50.049+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-07-15T10:55:50.050+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:55:50.121+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:55:50.182+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:55:50.302+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:55:50.303+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:55:50.342+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:55:50.425+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53292e1e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bfe6236, org.springframework.security.web.context.SecurityContextHolderFilter@7fa875a2, org.springframework.security.web.header.HeaderWriterFilter@57bf2099, org.springframework.web.filter.CorsFilter@731988d8, org.springframework.security.web.authentication.logout.LogoutFilter@18240964, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@5a3101c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cdc4ba2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c90f48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e248ad6, org.springframework.security.web.session.SessionManagementFilter@2eb31a23, org.springframework.security.web.access.ExceptionTranslationFilter@43400ee3, org.springframework.security.web.access.intercept.AuthorizationFilter@1c122441]
+2024-07-15T10:55:50.474+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:55:50.485+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:55:50.489+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 1.001 seconds (process running for 1345.687)
+2024-07-15T10:55:50.491+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-15T10:55:52.962+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-07-15T10:55:52.976+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:55:52.977+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-07-15T10:55:52.986+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-07-15T10:55:53.091+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:55:53.093+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:55:53.353+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:55:53.380+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:55:53.461+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:55:53.462+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:55:53.462+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:55:53.489+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:55:53.489+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 395 ms
+2024-07-15T10:55:53.513+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:55:53.515+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:55:53.522+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:55:53.523+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-07-15T10:55:53.537+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c79b858
+2024-07-15T10:55:53.537+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-07-15T10:55:53.538+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:55:53.613+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:55:53.664+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:55:53.744+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:55:53.745+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:55:53.780+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:55:53.869+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44b4377c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3037d3a5, org.springframework.security.web.context.SecurityContextHolderFilter@3a29a9e8, org.springframework.security.web.header.HeaderWriterFilter@dcfc115, org.springframework.web.filter.CorsFilter@12091ae, org.springframework.security.web.authentication.logout.LogoutFilter@1dad2b44, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@320e1d49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73aafa54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9e5a5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35424427, org.springframework.security.web.session.SessionManagementFilter@76539377, org.springframework.security.web.access.ExceptionTranslationFilter@4f9a667, org.springframework.security.web.access.intercept.AuthorizationFilter@4bcff32e]
+2024-07-15T10:55:53.934+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:55:53.952+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:55:53.960+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 0.918 seconds (process running for 1349.158)
+2024-07-15T10:55:53.961+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-15T10:55:57.436+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-07-15T10:55:57.469+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:55:57.470+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-07-15T10:55:57.476+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-07-15T10:55:57.592+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:55:57.593+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:55:57.804+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:55:57.827+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:55:57.904+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:55:57.905+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:55:57.905+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:55:57.935+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:55:57.935+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 341 ms
+2024-07-15T10:55:57.964+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:55:57.966+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:55:57.973+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:55:57.974+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-07-15T10:55:57.986+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27e2c879
+2024-07-15T10:55:57.986+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-07-15T10:55:57.987+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:55:58.034+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:55:58.072+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:55:58.142+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:55:58.142+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:55:58.165+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:55:58.215+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f626cdf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c56aa06, org.springframework.security.web.context.SecurityContextHolderFilter@29107476, org.springframework.security.web.header.HeaderWriterFilter@4c52bf2f, org.springframework.web.filter.CorsFilter@649b5622, org.springframework.security.web.authentication.logout.LogoutFilter@67328ea3, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@2378b69a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@339b64b7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ae91e2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d203fb6, org.springframework.security.web.session.SessionManagementFilter@3f131ec3, org.springframework.security.web.access.ExceptionTranslationFilter@2bf63ce7, org.springframework.security.web.access.intercept.AuthorizationFilter@2dde8780]
+2024-07-15T10:55:58.265+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:55:58.281+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:55:58.287+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 0.745 seconds (process running for 1353.485)
+2024-07-15T10:55:58.289+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-15T10:56:11.449+05:30  INFO 17888 --- [networkticketingapplicationproject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 57 class path changes (0 additions, 0 deletions, 57 modifications)
+2024-07-15T10:56:11.473+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:56:11.474+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-07-15T10:56:11.480+05:30  INFO 17888 --- [networkticketingapplicationproject] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-07-15T10:56:11.575+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Starting NetworkticketingapplicationprojectApplication using Java 17.0.10 with PID 17888 (D:\nta\nta\backend\target\classes started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:56:11.576+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:56:11.786+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:56:11.812+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:56:11.893+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-07-15T10:56:11.894+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-15T10:56:11.894+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-15T10:56:11.922+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-15T10:56:11.923+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 346 ms
+2024-07-15T10:56:11.948+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:56:11.949+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:56:11.959+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:56:11.960+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-07-15T10:56:11.973+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33918524
+2024-07-15T10:56:11.973+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-07-15T10:56:11.974+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:56:12.025+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:56:12.071+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:56:12.146+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:56:12.146+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:56:12.168+05:30  WARN 17888 --- [networkticketingapplicationproject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:56:12.235+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72576cb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b123f6f, org.springframework.security.web.context.SecurityContextHolderFilter@3d797685, org.springframework.security.web.header.HeaderWriterFilter@2628fd6d, org.springframework.web.filter.CorsFilter@4795687d, org.springframework.security.web.authentication.logout.LogoutFilter@720bc212, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@132d3e8d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7448a2f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15eafa89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dea5094, org.springframework.security.web.session.SessionManagementFilter@6c9fba89, org.springframework.security.web.access.ExceptionTranslationFilter@52636379, org.springframework.security.web.access.intercept.AuthorizationFilter@119759e]
+2024-07-15T10:56:12.315+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-15T10:56:12.326+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2024-07-15T10:56:12.331+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] rkticketingapplicationprojectApplication : Started NetworkticketingapplicationprojectApplication in 0.799 seconds (process running for 1367.529)
+2024-07-15T10:56:12.332+05:30  INFO 17888 --- [networkticketingapplicationproject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-15T10:56:29.243+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : Starting NetworkticketingapplicationprojectApplicationTests using Java 17.0.10 with PID 26972 (started by prasannakumar.d in D:\nta\nta\backend)
+2024-07-15T10:56:29.245+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T10:56:30.980+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T10:56:31.131+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 3 JPA repository interfaces.
+2024-07-15T10:56:32.142+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T10:56:32.267+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-15T10:56:32.346+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T10:56:32.621+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T10:56:32.680+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-15T10:56:33.261+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1af29de
+2024-07-15T10:56:33.266+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-15T10:56:33.349+05:30  WARN 26972 --- [networkticketingapplicationproject] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-15T10:56:34.699+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-15T10:56:34.868+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:56:35.405+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-15T10:56:35.516+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-15T10:56:35.517+05:30  WARN 26972 --- [networkticketingapplicationproject] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-07-15T10:56:35.722+05:30  WARN 26972 --- [networkticketingapplicationproject] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-15T10:56:36.202+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77a02171, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@664b784c, org.springframework.security.web.context.SecurityContextHolderFilter@68ce10f4, org.springframework.security.web.header.HeaderWriterFilter@1fb85c28, org.springframework.web.filter.CorsFilter@3c180da5, org.springframework.security.web.authentication.logout.LogoutFilter@241f9269, com.prodapt.networkticketingapplicationproject.security.jwt.AuthTokenFilter@6a2b5981, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55d38ea1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@560465ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2941fab3, org.springframework.security.web.session.SessionManagementFilter@3f14d051, org.springframework.security.web.access.ExceptionTranslationFilter@2fd3256e, org.springframework.security.web.access.intercept.AuthorizationFilter@210f70d0]
+2024-07-15T10:56:36.777+05:30  INFO 26972 --- [networkticketingapplicationproject] [main] ketingapplicationprojectApplicationTests : Started NetworkticketingapplicationprojectApplicationTests in 8.264 seconds (process running for 14.425)
+2024-07-15T10:56:37.167+05:30  INFO 26972 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-15T10:56:37.170+05:30  INFO 26972 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-15T10:56:37.180+05:30  INFO 26972 --- [networkticketingapplicationproject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

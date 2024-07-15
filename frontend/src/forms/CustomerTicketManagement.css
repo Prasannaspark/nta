@@ -1,0 +1,108 @@
+.container {
+    margin-top: 50px;
+    color: #4078a5;
+  }
+   
+  h2 {
+    padding-top: 3rem;
+    font-family: 'Georgia';
+    color:#4078a5;
+  }
+   
+  h3 {
+    font-family: 'Georgia';
+    color: #4078a5;
+  }
+   
+  p {
+    font-family: 'Georgia';
+    color:#4078a5;
+  }
+   
+  .card-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia';
+  }
+   
+  .table {
+    margin-top: 30px;
+    font-family: 'Georgia';
+  }
+   
+  .table thead {
+    background-color: #4078a5;
+    color: #f4eeff;
+  }
+   
+  .table tbody tr:nth-child(even) {
+    background-color:  #ffffff;
+  }
+   
+  .table tbody tr:nth-child(odd) {
+    background-color:#edf3f8;
+  }
+   
+  .table tbody tr {
+    text-align: center;
+  }
+   
+  .table tbody tr:nth-child(odd) .btn-default {
+    border-color: #edf3f8;
+  }
+   
+  .btn-default {
+    background-color: #ffffff;
+    border-color: #edf3f8;
+    color: #4078a5;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+   
+  .btn-default:hover,
+  .btn-default:hover {
+    background-color: #4078a5 !important;
+    color: white !important;
+  }
+   
+  .btn-secondary:hover,
+  .btn-primary:hover,
+  .btn-danger:hover {
+    background-color: #4078a5 !important;
+    color: white !important;
+  }
+   
+   
+  .btn-secondary,
+  .btn-primary,
+  .btn-danger {
+    background-color: #ffffff;
+    border-color: #edf3f8;
+    color: #4078a5;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+   
+  .btn-secondary:hover,
+  .btn-primary:hover,
+  .btn-danger:hover {
+    color: #ffffff;
+  }
+   
+  .mt-4 {
+    margin-top: 1.5rem ;
+  }
+   
+  .mx-1 {
+    margin-left: 0.25rem ;
+    margin-right: 0.25rem ;
+  }
+   
+  .d-flex {
+    display: flex;
+  }
+   
+  .justify-content-center {
+    justify-content: center;
+  }

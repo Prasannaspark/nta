@@ -18,7 +18,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.prodapt.networkticketingapplicationproject.entities.IssueType;
 import com.prodapt.networkticketingapplicationproject.entities.Ticket;
 import com.prodapt.networkticketingapplicationproject.entities.UserEntity;
 import com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException;
@@ -47,11 +46,10 @@ public class CustomerControllerTest {
 
     @Test
     void testAddTicketSuccess() {
-        TicketRequest requestTicket = new TicketRequest("title", "description", IssueType.ADMINISTRATIVE, "username");
+        TicketRequest requestTicket = new TicketRequest("title", "description", "username");
         Ticket ticket = new Ticket();
         ticket.setTitle(requestTicket.getTitle());
         ticket.setDescription(requestTicket.getDescription());
-        ticket.setIssueType(requestTicket.getIssueType());
         
         UserEntity userEntity = new UserEntity();
         when(userEntityService.findByUsername(requestTicket.getUsername())).thenReturn(Optional.of(userEntity));
@@ -65,7 +63,7 @@ public class CustomerControllerTest {
 
     @Test
     void testAddTicketFailure() {
-        TicketRequest requestTicket = new TicketRequest("title", "description", IssueType.ADMINISTRATIVE, "username");
+        TicketRequest requestTicket = new TicketRequest("title", "description", "username");
         
         when(userEntityService.findByUsername(requestTicket.getUsername())).thenReturn(Optional.empty());
 
@@ -76,11 +74,10 @@ public class CustomerControllerTest {
 
     @Test
     void testUpdateTicketSuccess() throws TicketNotFoundException {
-        TicketUpdateRequest requestTicket = new TicketUpdateRequest(1, "newTitle", "newDescription", IssueType.ADMINISTRATIVE);
+        TicketUpdateRequest requestTicket = new TicketUpdateRequest(1, "newTitle", "newDescription");
         Ticket ticket = new Ticket();
         ticket.setTitle(requestTicket.getTitle());
         ticket.setDescription(requestTicket.getDescription());
-        ticket.setIssueType(requestTicket.getIssueType());
         
         when(ticketService.getTicketById(requestTicket.getTicketId())).thenReturn(ticket);
         when(ticketService.updateTicket(any(Ticket.class))).thenReturn(ticket);
@@ -93,7 +90,7 @@ public class CustomerControllerTest {
 
     @Test
     void testUpdateTicketFailure() throws TicketNotFoundException {
-        TicketUpdateRequest requestTicket = new TicketUpdateRequest(1, "newTitle", "newDescription", IssueType.ADMINISTRATIVE);
+        TicketUpdateRequest requestTicket = new TicketUpdateRequest(1, "newTitle", "newDescription");
         
         when(ticketService.getTicketById(requestTicket.getTicketId())).thenThrow(new TicketNotFoundException("Ticket not found"));
 
@@ -102,6 +99,8 @@ public class CustomerControllerTest {
         });
     }
 
+    
+    
     @Test
     void testGetTicketSuccess() throws TicketNotFoundException {
         GetByTicketId getByTicketId = new GetByTicketId(1);
@@ -154,6 +153,7 @@ public class CustomerControllerTest {
         assertEquals("No value present", exception.getMessage());
     }
 
+    
     @Test
     void testGetMyTicketsException() throws TicketNotFoundException {
         GetCustomerTickets getCustomerTickets = new GetCustomerTickets("username");

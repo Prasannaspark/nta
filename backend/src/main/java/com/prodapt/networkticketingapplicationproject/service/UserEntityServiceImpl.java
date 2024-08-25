@@ -1,5 +1,6 @@
 package com.prodapt.networkticketingapplicationproject.service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,7 +32,6 @@ public class UserEntityServiceImpl  implements UserEntityService{
 		}
 		return "Role Update Unsuccessfull";
 	}
-
 	
 	@Override
 	public UserEntity getUserById(Integer id) {
@@ -85,8 +85,10 @@ public class UserEntityServiceImpl  implements UserEntityService{
 	@Override
 	public List<UserEntity> getAll() {
 		List<UserEntity> users= (List<UserEntity>) repo.findAll();
+		Collections.reverse(users);
 		return users;
 	}
+
 
 	
 

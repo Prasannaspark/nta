@@ -67,13 +67,30 @@ const viewTickets = async (id) => {
   
 };
 
+const RequestTier = async (userData) => {
+  try {
+    const response = await axios.post(`${BASE_URL}/updaterequest`,userData, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...authHeader(),
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+    return response.data;
+   
+  } catch (err) {
+    throw err;
+  }
+  
+};
 
 
 const CustomerService = {
   addTicket,
   getTicket,
   updateCustomerTicket,
-  viewTickets
+  viewTickets,
+  RequestTier
 };
 
 export default CustomerService;

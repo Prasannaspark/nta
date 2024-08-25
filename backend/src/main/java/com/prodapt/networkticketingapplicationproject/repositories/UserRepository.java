@@ -19,6 +19,6 @@ public interface UserRepository extends CrudRepository<UserEntity, Integer> {
 
 	public Optional<UserEntity> findByRole(ERole role);
 	
-
+   
 
 }

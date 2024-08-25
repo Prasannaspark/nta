@@ -40,6 +40,10 @@ public class UserEntity {
 	@Enumerated(EnumType.STRING)
 	@Column(length = 20)
 	private CustomerTier tier;  //type enum
+	
+	@Enumerated(EnumType.STRING)
+	@Column(length = 20)
+	private Request request;
 
     @ManyToOne
 	private Role role ;
@@ -50,7 +54,6 @@ public class UserEntity {
 		this.email = email;
 		this.password = password;
 	}
-	
-	
+
 
 }

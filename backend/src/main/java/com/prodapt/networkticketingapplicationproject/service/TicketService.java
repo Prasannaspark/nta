@@ -46,10 +46,13 @@ public interface TicketService {
 	public List<Ticket> administrativeIssue() throws TicketNotFoundException;
 	
 
+	//gold ticket
+	public List<Ticket> goldTicketHandler()throws TicketNotFoundException;
+    
+	//silver ticket
+	public List<Ticket> silverTicketHandler() throws TicketNotFoundException;
 	
 	
-
-	//
 	public List<Ticket> findTicketsWithHighPriorityAndVariousSeverities() throws TicketNotFoundException;
 	public List<Ticket> findTicketsWithMediumPriorityAndVariousSeverities() throws TicketNotFoundException;
 	public List<Ticket> findTicketsWithLowPriorityAndVariousSeverities() throws TicketNotFoundException;

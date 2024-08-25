@@ -34,7 +34,7 @@ public interface TicketRepository extends CrudRepository<Ticket,Integer>
 	
 	public List<Ticket> findByUserId(Integer userId);
 
-	@Query(value = "SELECT t.ticket_id, u.username, t.title, t.creation_date, t.status, t.priority, t.last_updated, DATEDIFF(CURDATE(), t.creation_date) as agingDays FROM tickets_table t join user_table u on t.user_id=u.id", nativeQuery = true)
+	@Query(value = "SELECT t.ticket_id, u.username, t.title, t.creation_date, t.status, t.priority, t.last_updated, DATEDIFF(CURDATE(), t.creation_date) as agingDays FROM tickets_table t join user_table u on t.user_id=u.id WHERE t.status = 'OPEN'", nativeQuery = true)
     List<Object[]> generateTicketAgingReport();
  
     @Query(value = "SELECT t.ticket_id, u.username, t.title, t.creation_date, t.status, t.priority, t.last_updated, TIMESTAMPDIFF(DAY, t.creation_Date, t.last_updated) as resolutionTime FROM tickets_table t JOIN user_table u ON t.user_id = u.id WHERE t.status = 'CLOSE'", nativeQuery = true)

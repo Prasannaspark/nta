@@ -23,6 +23,7 @@ import org.springframework.http.ResponseEntity;
 
 import com.prodapt.networkticketingapplicationproject.entities.CustomerTier;
 import com.prodapt.networkticketingapplicationproject.entities.ERole;
+import com.prodapt.networkticketingapplicationproject.entities.IssueType;
 import com.prodapt.networkticketingapplicationproject.entities.Priority;
 import com.prodapt.networkticketingapplicationproject.entities.Role;
 import com.prodapt.networkticketingapplicationproject.entities.Severity;
@@ -139,7 +140,7 @@ public class AdminControllerTest {
 
     @Test
     void testUpdateTicketSuccess_GoldCustomer() throws TicketNotFoundException {
-        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.HIGH, Severity.HIGH);
+        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.HIGH, Severity.HIGH,  IssueType.ADMINISTRATIVE);
         Ticket ticket = new Ticket();
         ticket.setCustomerTier(CustomerTier.GOLD);
 
@@ -157,7 +158,7 @@ public class AdminControllerTest {
 
     @Test
     void testUpdateTicketSuccess_SilverCustomerLowPriority() throws TicketNotFoundException {
-        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.LOW, Severity.HIGH);
+        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.LOW, Severity.HIGH,  IssueType.ADMINISTRATIVE);
         Ticket ticket = new Ticket();
         ticket.setCustomerTier(CustomerTier.SILVER);
 
@@ -172,7 +173,7 @@ public class AdminControllerTest {
 
     @Test
     void testUpdateTicketSuccess_SilverCustomerMediumPriority() throws TicketNotFoundException {
-        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.MEDIUM, Severity.HIGH);
+        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.MEDIUM, Severity.HIGH,  IssueType.ADMINISTRATIVE);
         Ticket ticket = new Ticket();
         ticket.setCustomerTier(CustomerTier.SILVER);
 
@@ -187,7 +188,7 @@ public class AdminControllerTest {
 
     @Test
     void testUpdateTicketSuccess_BronzeCustomer() throws TicketNotFoundException {
-        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.HIGH, Severity.HIGH);
+        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.HIGH, Severity.HIGH,  IssueType.ADMINISTRATIVE);
         Ticket ticket = new Ticket();
         ticket.setCustomerTier(CustomerTier.BRONZE);
 
@@ -205,7 +206,7 @@ public class AdminControllerTest {
 
     @Test
     void testUpdateTicketFailure_TicketNotFound() throws TicketNotFoundException {
-        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.HIGH, Severity.HIGH);
+        TicketUpdateAdmin request = new TicketUpdateAdmin(1, Priority.HIGH, Severity.HIGH, IssueType.ADMINISTRATIVE);
         when(ticketService.getTicketById(request.getTicketId())).thenThrow(new TicketNotFoundException("Ticket not found"));
 
         assertThrows(TicketNotFoundException.class, () -> {

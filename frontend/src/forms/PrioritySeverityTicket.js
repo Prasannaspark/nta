@@ -9,6 +9,8 @@ function PrioritySeverityTicket() {
     const [ticketData, setTicketData] = useState({
         priority:'',
         severity:'',
+        issuetype:'',
+        status:'INPROGRESS',
     });
 
     const [submittedMessage, setSubmittedMessage] = useState('');
@@ -56,7 +58,7 @@ function PrioritySeverityTicket() {
     
     return (
         <div className="auth-container mt-5">
-            <h2>SET PRIORITY AND SEVERITY</h2>
+            <h2>SET PRIORITY SEVERITY AND ISSUE TYPE</h2>
 
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -77,6 +79,19 @@ function PrioritySeverityTicket() {
                         <option value="HIGH">High</option>
                     </select>
                 </div>
+                <div className="mb-3">
+              <label htmlFor="issuetype" className="form-label">Issue Type :</label>
+              <select className="form-select" id="issuetype" name="issuetype" value={ticketData.issuetype || ''} onChange={handleInputChange} required>
+                <option value="">Select Issue Type</option>
+                <option value="CONNECTIVITY">Connectivity</option>
+                <option value="ADMINISTRATIVE">Administrative</option>
+                <option value="HARDWARE">Hardware</option>
+                <option value="PERFORMANCE">Performance</option>
+
+              </select>
+            </div>
+
+
 
                 <button type="submit" className="btn btn-default">SET</button>
             </form>

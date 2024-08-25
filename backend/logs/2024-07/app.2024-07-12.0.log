@@ -1,5 +1,0 @@
-2024-07-12T10:53:24.750+05:30  WARN 17328 --- [networkticketingapplicationproject] [HikariPool-15 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Thread starvation or clock leap detected (housekeeper delta=12h27m38s781ms344µs700ns).
-2024-07-12T10:53:36.144+05:30  INFO 17328 --- [networkticketingapplicationproject] [RMI TCP Connection(229)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2024-07-12T10:53:36.273+05:30  INFO 17328 --- [networkticketingapplicationproject] [RMI TCP Connection(229)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-12T10:53:36.308+05:30  INFO 17328 --- [networkticketingapplicationproject] [RMI TCP Connection(229)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
-2024-07-12T10:53:36.313+05:30  INFO 17328 --- [networkticketingapplicationproject] [RMI TCP Connection(229)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.

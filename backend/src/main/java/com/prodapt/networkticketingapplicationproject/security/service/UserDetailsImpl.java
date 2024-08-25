@@ -22,15 +22,18 @@ public class UserDetailsImpl implements UserDetails {
     private String password;
  
     private GrantedAuthority authority;
+    
+    private String tier;
  
  
     public UserDetailsImpl(Integer id, String username,String email, String password,
-            GrantedAuthority authority) {
+            GrantedAuthority authority,String tier) {
         this.id = id;
         this.username = username;
         this.email=email;
         this.password = password;
         this.authority = authority;
+        this.tier=tier;
         
     }
  
@@ -42,7 +45,8 @@ public class UserDetailsImpl implements UserDetails {
                 user.getUsername(),
                 user.getEmail(),
                 user.getPassword(),
-                authority);
+                authority,
+                user.getTier().toString());
     }
  
     @Override
@@ -56,6 +60,10 @@ public class UserDetailsImpl implements UserDetails {
     
     public String getEmail() {
         return email;
+    }
+    
+    public String getTier() {
+        return tier;
     }
   
     @Override

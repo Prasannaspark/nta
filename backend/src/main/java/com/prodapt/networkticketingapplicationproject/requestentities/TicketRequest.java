@@ -1,8 +1,7 @@
 package com.prodapt.networkticketingapplicationproject.requestentities;
 
 
-import com.prodapt.networkticketingapplicationproject.entities.CustomerTier;
-import com.prodapt.networkticketingapplicationproject.entities.IssueType;
+
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -22,9 +21,6 @@ public class TicketRequest {
 	private String title;
 	
 	private String description;
-	
-	@Enumerated(EnumType.STRING)
-	private IssueType issueType;
 	
 	private String username;
 

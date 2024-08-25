@@ -22,12 +22,14 @@ public class JwtResponse {
 	private String email;
 	@Exclude
 	private String role;
+	private String tier;
 
-	public JwtResponse(String accessToken, Integer id, String username, String email,String role) {
+	public JwtResponse(String accessToken, Integer id, String username, String email,String role,String tier) {
 		this.accessToken = accessToken;
 		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.role = role;
+		this.tier=tier;
 	}
 }

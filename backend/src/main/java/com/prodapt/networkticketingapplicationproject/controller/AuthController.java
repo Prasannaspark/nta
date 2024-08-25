@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.prodapt.networkticketingapplicationproject.entities.CustomerTier;
 import com.prodapt.networkticketingapplicationproject.entities.ERole;
+import com.prodapt.networkticketingapplicationproject.entities.Request;
 import com.prodapt.networkticketingapplicationproject.entities.Status;
 import com.prodapt.networkticketingapplicationproject.entities.UserEntity;
 import com.prodapt.networkticketingapplicationproject.exceptions.RoleNotFoundException;
@@ -71,11 +72,12 @@ public class AuthController {
 
 		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
 		String role = userDetails.getAuthorities().stream().findFirst() // Get the first authority
+	   //String tier= userDetails.
 				.map(item -> item.getAuthority()) // Map it to its authority string
 				.orElse(null);
-		
+		String tier= userDetails.getTier();
 		return ResponseEntity.ok(
-				new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), userDetails.getEmail(), role));
+				new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), userDetails.getEmail(), role,tier));
 	}
 
 	@PostMapping("/signup")
@@ -99,6 +101,7 @@ public class AuthController {
 		
         user.setRole(roleService.findRoleByName(ERole.ROLE_USER).get());
         user.setTier(CustomerTier.BRONZE);
+        user.setRequest(null);
         
         userEntityService.addUserEntity(user);
   

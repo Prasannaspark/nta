@@ -1,6 +1,5 @@
 package com.prodapt.networkticketingapplicationproject.requestentities;
 
-import com.prodapt.networkticketingapplicationproject.entities.CustomerTier;
 import com.prodapt.networkticketingapplicationproject.entities.Request;
 
 import jakarta.persistence.EnumType;
@@ -11,21 +10,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @ToString
-public class AdminUpdateCustomerTier {
-  
-	private String  username;
-    
-    @Enumerated(EnumType.STRING)
-	private CustomerTier customertier;
-    
-    @Enumerated(EnumType.STRING)
-   	private Request reqchange;
-    
+@AllArgsConstructor
+@NoArgsConstructor
+public class AdminUpdateRequestforTier {
 	
+   private String username;
+	
+   @Enumerated(EnumType.STRING)
+	private Request request;
+  
+   
+   
+
 }

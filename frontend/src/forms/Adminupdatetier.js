@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import AdminService from '../services/AdminService';
+import AuthService from "../services/auth.service";
 import './UpdateUser.css'
 
 function Adminupdatetier() {
   const navigate = useNavigate();
   const {id} = useParams;
   const [userData, setUserData] = useState({
-    username: '',
-    customertier: ''
+    username:'',
+    customertier: '',
+    reqchange: 'UPDATED'
   });
+  
 
   useEffect(() => {
     fetchUserDataById(id);
@@ -75,6 +78,18 @@ function Adminupdatetier() {
               <option value="GOLD">GOLD</option>
               </select>
             </div>
+            {/* <div className="form-group">
+          <label>REQUEST UPDATE NOTIFY:</label>
+          <select
+            name="reqchange"
+            value={userData.reqchange}
+            onChange={handleInputChange}
+            required
+          >
+              <option value="">Select Change</option>
+              <option value="UPDATED">Modified as Request</option>
+              </select>
+            </div> */}
             <button type="submit" className="btn btn-default w-100">UPDATE</button>
         <div className="text-center">
           <button className="btn btn-default w-100" onClick={() => navigate("/usermanagement")}>Back to User Management</button>

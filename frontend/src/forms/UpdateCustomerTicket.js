@@ -8,8 +8,7 @@ function UpdateCustomerTicket() {
 
   const [ticketData, setTicketData] = useState({
     title: '',
-    description: '',
-    issueType: ''
+    description: ''
   });
 
   useEffect(() => {
@@ -59,16 +58,6 @@ function UpdateCustomerTicket() {
         <div className="mb-3">
           <label htmlFor="description" className="form-label">Description :</label>
           <input type="text" className="form-control" id="description" name="description" value={ticketData.description || ''} onChange={handleInputChange} required />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="issueType" className="form-label">Issue Type :</label>
-          <select className="form-select" id="issueType" name="issueType" value={ticketData.issueType || ''} onChange={handleInputChange} required>
-            <option value="">Select Issue Type</option>
-            <option value="CONNECTIVITY">Connectivity</option>
-            <option value="ADMINISTRATIVE">Administrative</option>
-            <option value="HARDWARE">Hardware</option>
-            <option value="PERFORMANCE">Performance</option>
-          </select>
         </div>
         <button type="submit" className="btn btn-default">UPDATE</button>
         <div className="card-footer text-center">

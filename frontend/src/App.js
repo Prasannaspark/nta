@@ -48,6 +48,7 @@ import TicketAgingReport from "./forms/TicketAgingReport";
 import ResolutionTimeReport from "./forms/ResolutionTimeReport";
 import PriorityAnalysisReport from "./forms/PriorityAnalysisReport";
 import AdminUpdateTier from "./forms/Adminupdatetier";
+import CustomerRequesttoupdatetier from "./forms/CustomerRequestTier";
 
 
 const App = () => {
@@ -112,10 +113,10 @@ const App = () => {
           {showAdmin && (
             <li className="nav-item">
               <Link to={"/usermanagement"} className="nav-link">
-                User Dashboard
+                User's Dashboard
               </Link>
             </li>
-          )}
+          )} 
 
           {showAdmin && (
             <li className="nav-item">
@@ -357,6 +358,7 @@ const App = () => {
           <Route path="/resolutionTimeReport" element={<ResolutionTimeReport/>}/>
           <Route path="/priorityAnalysisReport" element={<PriorityAnalysisReport/>}/>
           <Route path="/tierupdate/:id" element={<AdminUpdateTier/>}/>
+          <Route path="/requestforTier" element={<CustomerRequesttoupdatetier/>}/>
         </Routes>
       </div>
 

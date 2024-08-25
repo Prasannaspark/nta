@@ -18,6 +18,7 @@ import com.prodapt.networkticketingapplicationproject.entities.UserEntity;
 import com.prodapt.networkticketingapplicationproject.exceptions.TicketNotFoundException;
 import com.prodapt.networkticketingapplicationproject.requestentities.GetByTicketId;
 import com.prodapt.networkticketingapplicationproject.requestentities.GetCustomerTickets;
+import com.prodapt.networkticketingapplicationproject.requestentities.RequestByUser;
 import com.prodapt.networkticketingapplicationproject.requestentities.TicketRequest;
 import com.prodapt.networkticketingapplicationproject.requestentities.TicketUpdateRequest;
 import com.prodapt.networkticketingapplicationproject.service.TicketService;
@@ -40,7 +41,6 @@ public class CustomerController {
 		Ticket ticket=new Ticket();
 		ticket.setTitle(requestTicket.getTitle());
 		ticket.setDescription(requestTicket.getDescription());
-		ticket.setIssueType(requestTicket.getIssueType());
 		Optional<UserEntity> user= userEntityService.findByUsername(requestTicket.getUsername());
 		ticket.setUser(user.get());
 		Ticket t= ticketService.addTicket(ticket);
@@ -53,7 +53,6 @@ public class CustomerController {
 		Ticket ticket=ticketService.getTicketById(requestTicket.getTicketId());
 		ticket.setTitle(requestTicket.getTitle());
 		ticket.setDescription(requestTicket.getDescription());
-		ticket.setIssueType(requestTicket.getIssueType());
 		Ticket t= ticketService.updateTicket(ticket);
 		loggers.info("updateticket");
 		return new ResponseEntity<>(t,HttpStatus.OK);
@@ -77,5 +76,23 @@ public class CustomerController {
 		return new ResponseEntity<>(t,HttpStatus.OK);
 	
 	}
+	
+	@PostMapping("/updaterequest")
+	public ResponseEntity<UserEntity> tierreq(@RequestBody   RequestByUser user) {
+		Optional<UserEntity> userreq=userEntityService.findByUsername(user.getUsername());
+		if (user == null) {
+			return ResponseEntity.notFound().build();
+		}
+		
+		userreq.get().setRequest(user.getRequest());
+		
+		UserEntity userentity=userEntityService.addUserEntity(userreq.get());
+	  
+		return new ResponseEntity<UserEntity>(userentity,HttpStatus.OK);
+	
+	}
+	
+
+	
 	
 }

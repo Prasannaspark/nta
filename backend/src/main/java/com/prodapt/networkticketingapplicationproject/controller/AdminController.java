@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.prodapt.networkticketingapplicationproject.entities.CustomerTier;
 import com.prodapt.networkticketingapplicationproject.entities.Priority;
 import com.prodapt.networkticketingapplicationproject.entities.Role;
+import com.prodapt.networkticketingapplicationproject.entities.Status;
 import com.prodapt.networkticketingapplicationproject.entities.Ticket;
 import com.prodapt.networkticketingapplicationproject.entities.UserEntity;
 import com.prodapt.networkticketingapplicationproject.exceptions.RoleNotFoundException;
@@ -26,8 +27,10 @@ import com.prodapt.networkticketingapplicationproject.model.PriorityAnalysisRepo
 import com.prodapt.networkticketingapplicationproject.model.ResolutionTimeReport;
 import com.prodapt.networkticketingapplicationproject.model.TicketAgingReport;
 import com.prodapt.networkticketingapplicationproject.requestentities.AdminUpdateCustomerTier;
+import com.prodapt.networkticketingapplicationproject.requestentities.AdminUpdateRequestforTier;
 import com.prodapt.networkticketingapplicationproject.requestentities.GetByTicketId;
 import com.prodapt.networkticketingapplicationproject.requestentities.GetUserById;
+import com.prodapt.networkticketingapplicationproject.requestentities.RequestByUser;
 import com.prodapt.networkticketingapplicationproject.requestentities.TicketUpdateAdmin;
 import com.prodapt.networkticketingapplicationproject.requestentities.UpdateUserRoleRequest;
 import com.prodapt.networkticketingapplicationproject.service.RoleService;
@@ -67,15 +70,18 @@ public class AdminController {
 
 	@PostMapping("/updateuserrole")
 	public ResponseEntity<String> updateUserRole(@RequestBody UpdateUserRoleRequest updateUserRoleRequest)
-			throws RoleNotFoundException {
+			throws RoleNotFoundException,UsernameNotFoundException{
 
 		// Find the role by name
 		Optional<Role> r = roleService.findRoleByName(updateUserRoleRequest.getRole());
 
 		// Update the user role
+		
 		String message = userService.updaterole(updateUserRoleRequest.getUsername(), r.get());
 		loggers.info("Role Updated Successfully");
 		return new ResponseEntity<String>(message, HttpStatus.OK);
+
+
 
 	}
 
@@ -94,18 +100,24 @@ public class AdminController {
 		
 		
 		usertier.get().setTier(req.getCustomertier());
+		usertier.get().setRequest(req.getReqchange());
 	
 		
 		UserEntity userentity=userService.addUserEntity(usertier.get());
 		
 		return new ResponseEntity<UserEntity>(userentity, HttpStatus.OK);
+		
 	}
 
 	@PostMapping("/allotpriorityandseverity")
 	public ResponseEntity<Ticket> updateTicket(@RequestBody TicketUpdateAdmin req) throws TicketNotFoundException
+	
 	{
 
 		Ticket ticket = ticketService.getTicketById(req.getTicketId());
+		
+		ticket.setIssueType(req.getIssuetype());
+	  
 
 		if (ticket.getCustomerTier() == CustomerTier.GOLD) {
 			
@@ -123,6 +135,7 @@ public class AdminController {
 				ticket.setSeverity(req.getSeverity());
 				ticket.setPriority(Priority.MEDIUM);
 				ticket.setLastUpdated(LocalDate.now());
+			
 				Ticket updatedTicket = ticketService.updateTicket(ticket);
 				return new ResponseEntity<>(updatedTicket, HttpStatus.OK);
 			    }
@@ -137,6 +150,7 @@ public class AdminController {
 				ticket.setSeverity(req.getSeverity());
 				ticket.setPriority(req.getPriority());
 				ticket.setLastUpdated(LocalDate.now());
+				
 				Ticket updatedTicket = ticketService.updateTicket(ticket);
 				return new ResponseEntity<>(updatedTicket, HttpStatus.OK);
 			}
@@ -149,8 +163,8 @@ public class AdminController {
 			Ticket updatedTicket = ticketService.updateTicket(ticket);
 			return new ResponseEntity<>(updatedTicket, HttpStatus.OK);
 		}
+    
     }
-		
 		
 	}
 	
@@ -182,8 +196,6 @@ public class AdminController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-	
-    
     
 
 }

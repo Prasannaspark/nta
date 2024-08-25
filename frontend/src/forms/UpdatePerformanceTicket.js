@@ -49,14 +49,14 @@ function UpdatePerformanceTicket() {
  
   return (
     <div className="auth-container mt-5 pt-5">
-      <h2>UPDATE TICKET</h2>
+      <h2>RESOLVE TICKET</h2>
       <form onSubmit={handleSubmit}>
 
         <div className="mb-3">
             <label htmlFor="status" className="form-label">Status : </label>
             <select className="form-select" id="status" name="status" value={ticketData.status || ''} onChange={handleInputChange} required>
             <option value="">Update Status</option>
-            <option value="CLOSE">CLOSE</option>
+            <option value="CLOSE">RESOLVED</option>
           
           </select>
           </div>

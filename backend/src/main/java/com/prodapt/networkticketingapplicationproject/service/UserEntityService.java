@@ -25,5 +25,6 @@ public interface UserEntityService {
  
  public List<UserEntity> getAll();
  
+ 
 
 }

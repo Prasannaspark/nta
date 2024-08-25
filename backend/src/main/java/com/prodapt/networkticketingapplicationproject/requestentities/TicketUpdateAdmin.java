@@ -1,7 +1,9 @@
 package com.prodapt.networkticketingapplicationproject.requestentities;
 
+import com.prodapt.networkticketingapplicationproject.entities.IssueType;
 import com.prodapt.networkticketingapplicationproject.entities.Priority;
 import com.prodapt.networkticketingapplicationproject.entities.Severity;
+import com.prodapt.networkticketingapplicationproject.entities.Status;
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -26,4 +28,8 @@ public class TicketUpdateAdmin {
    @Enumerated(EnumType.STRING)
    private Severity severity;
 
+   @Enumerated(EnumType.STRING)
+   private IssueType issuetype;
+   
+   
 }
